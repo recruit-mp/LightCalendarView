@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>sun</item>
+		<item>mån</item>
+		<item>tys</item>
+		<item>ons</item>
+		<item>tor</item>
+		<item>fre</item>
+		<item>lau</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>sundag</item>
+		<item>måndag</item>
+		<item>tysdag</item>
+		<item>onsdag</item>
+		<item>torsdag</item>
+		<item>fredag</item>
+		<item>laurdag</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>jan</item>
+		<item>feb</item>
+		<item>mar</item>
+		<item>apr</item>
+		<item>mai</item>
+		<item>jun</item>
+		<item>jul</item>
+		<item>aug</item>
+		<item>sep</item>
+		<item>okt</item>
+		<item>nov</item>
+		<item>des</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>januar</item>
+		<item>februar</item>
+		<item>mars</item>
+		<item>april</item>
+		<item>mai</item>
+		<item>juni</item>
+		<item>juli</item>
+		<item>august</item>
+		<item>september</item>
+		<item>oktober</item>
+		<item>november</item>
+		<item>desember</item>
+	</string-array>
+</resources>

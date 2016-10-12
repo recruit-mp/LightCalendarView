@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>អា</item>
+		<item>ច</item>
+		<item>អ</item>
+		<item>ពុ</item>
+		<item>ព្រហ</item>
+		<item>សុ</item>
+		<item>ស</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>អាទិត្យ</item>
+		<item>ចន្ទ</item>
+		<item>អង្គារ</item>
+		<item>ពុធ</item>
+		<item>ព្រហស្បតិ៍</item>
+		<item>សុក្រ</item>
+		<item>សៅរ៍</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>មករា</item>
+		<item>កុម្ភៈ</item>
+		<item>មិនា</item>
+		<item>មេសា</item>
+		<item>ឧសភា</item>
+		<item>មិថុនា</item>
+		<item>កក្កដា</item>
+		<item>សីហា</item>
+		<item>កញ្ញា</item>
+		<item>តុលា</item>
+		<item>វិច្ឆិកា</item>
+		<item>ធ្នូ</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>មករា</item>
+		<item>កុម្ភៈ</item>
+		<item>មិនា</item>
+		<item>មេសា</item>
+		<item>ឧសភា</item>
+		<item>មិថុនា</item>
+		<item>កក្កដា</item>
+		<item>សីហា</item>
+		<item>កញ្ញា</item>
+		<item>តុលា</item>
+		<item>វិច្ឆិកា</item>
+		<item>ធ្នូ</item>
+	</string-array>
+</resources>

@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Пан</item>
+		<item>Аўт</item>
+		<item>Сер</item>
+		<item>Чцв</item>
+		<item>Пят</item>
+		<item>Суб</item>
+		<item>Ндз</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Нядзеля</item>
+		<item>Панядзелак</item>
+		<item>Аўторак</item>
+		<item>Серада</item>
+		<item>Чацвер</item>
+		<item>Пятніца</item>
+		<item>Субота</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Сту</item>
+		<item>Лют</item>
+		<item>Сак</item>
+		<item>Кра</item>
+		<item>Тра</item>
+		<item>Чэр</item>
+		<item>Ліп</item>
+		<item>Жні</item>
+		<item>Вер</item>
+		<item>Кас</item>
+		<item>Ліс</item>
+		<item>Сне</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Студзень</item>
+		<item>Люты</item>
+		<item>Сакавік</item>
+		<item>Красавік</item>
+		<item>Травень</item>
+		<item>Чэрвень</item>
+		<item>Ліпень</item>
+		<item>Жнівень</item>
+		<item>Верасень</item>
+		<item>Кастрычнік</item>
+		<item>Лістапад</item>
+		<item>Снежань</item>
+	</string-array>
+</resources>

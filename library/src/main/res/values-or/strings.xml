@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>ରବି</item>
+		<item>ସୋମ</item>
+		<item>ମଂଗଳ</item>
+		<item>ବୁଧ</item>
+		<item>ଗୁରୁ</item>
+		<item>ଶୁକ୍ର</item>
+		<item>ଶନି</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>ରବିବାର</item>
+		<item>ସୋମବାର</item>
+		<item>ମଗଂଳବାର</item>
+		<item>ବୁଧବାର</item>
+		<item>ଗୁରୁବାର</item>
+		<item>ଶୁକ୍ରବାର</item>
+		<item>ଶନିବାର</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>ଜାନୁ</item>
+		<item>ଫେବରୁ</item>
+		<item>ମାର</item>
+		<item>ଏପ୍ର</item>
+		<item>ମାଈ</item>
+		<item>ଜୁନ୍</item>
+		<item>ଜୁଲ୍</item>
+		<item>ଅଗସ୍ଟ</item>
+		<item>ସେପ୍ଟ</item>
+		<item>ଅକ୍ଟ</item>
+		<item>ନୋଭ</item>
+		<item>ଡିସ୍</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>ଜାନୁୟାରୀ</item>
+		<item>ଫେବୃୟାରୀ</item>
+		<item>ମାର୍ଚ଼</item>
+		<item>ଏପ୍ରଲ</item>
+		<item>ମାଈ</item>
+		<item>ଜୁନ୍</item>
+		<item>ଜୁଲାୟ</item>
+		<item>ଅଗଷ୍ତ</item>
+		<item>ସେପ୍ଟମ୍ବର୍</item>
+		<item>ଅକ୍ଟୋବର୍</item>
+		<item>ନୋଭେମ୍ବର</item>
+		<item>ଡିସମ୍ବର</item>
+	</string-array>
+</resources>

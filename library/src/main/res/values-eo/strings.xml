@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>dim</item>
+		<item>lun</item>
+		<item>mar</item>
+		<item>mer</item>
+		<item>ĵaŭ</item>
+		<item>ven</item>
+		<item>sab</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>dimanĉo</item>
+		<item>lundo</item>
+		<item>mardo</item>
+		<item>merkredo</item>
+		<item>ĵaŭdo</item>
+		<item>vendredo</item>
+		<item>sabato</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>jan.</item>
+		<item>feb.</item>
+		<item>mar.</item>
+		<item>apr.</item>
+		<item>majo</item>
+		<item>jun.</item>
+		<item>jul.</item>
+		<item>aŭg.</item>
+		<item>sep.</item>
+		<item>okt.</item>
+		<item>nov.</item>
+		<item>dec.</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>januaro</item>
+		<item>februaro</item>
+		<item>marto</item>
+		<item>aprilo</item>
+		<item>majo</item>
+		<item>junio</item>
+		<item>julio</item>
+		<item>aŭgusto</item>
+		<item>septembro</item>
+		<item>oktobro</item>
+		<item>novembro</item>
+		<item>decembro</item>
+	</string-array>
+</resources>

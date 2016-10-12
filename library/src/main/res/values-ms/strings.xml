@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Ahd</item>
+		<item>Isn</item>
+		<item>Sel</item>
+		<item>Rab</item>
+		<item>Kha</item>
+		<item>Jum</item>
+		<item>Sab</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Ahad</item>
+		<item>Isnin</item>
+		<item>Selasa</item>
+		<item>Rabu</item>
+		<item>Khamis</item>
+		<item>Jumaat</item>
+		<item>Sabtu</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Jan</item>
+		<item>Feb</item>
+		<item>Mac</item>
+		<item>Apr</item>
+		<item>Mei</item>
+		<item>Jun</item>
+		<item>Jul</item>
+		<item>Ogo</item>
+		<item>Sep</item>
+		<item>Okt</item>
+		<item>Nov</item>
+		<item>Dis</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Januari</item>
+		<item>Febuari</item>
+		<item>Mac</item>
+		<item>April</item>
+		<item>Mei</item>
+		<item>Jun</item>
+		<item>Julai</item>
+		<item>Ogos</item>
+		<item>September</item>
+		<item>Oktober</item>
+		<item>November</item>
+		<item>Disember</item>
+	</string-array>
+</resources>

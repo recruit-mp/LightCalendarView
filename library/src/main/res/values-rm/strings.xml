@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>du</item>
+		<item>gli</item>
+		<item>ma</item>
+		<item>me</item>
+		<item>gie</item>
+		<item>ve</item>
+		<item>so</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>dumengia</item>
+		<item>glindesdi</item>
+		<item>mardi</item>
+		<item>mesemna</item>
+		<item>gievgia</item>
+		<item>venderdi</item>
+		<item>sonda</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>schan</item>
+		<item>favr</item>
+		<item>mars</item>
+		<item>avr</item>
+		<item>matg</item>
+		<item>zercl</item>
+		<item>fan</item>
+		<item>avust</item>
+		<item>sett</item>
+		<item>oct</item>
+		<item>nov</item>
+		<item>dec</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>schaner</item>
+		<item>favrer</item>
+		<item>mars</item>
+		<item>avrigl</item>
+		<item>matg</item>
+		<item>zercladur</item>
+		<item>fanadur</item>
+		<item>avust</item>
+		<item>settember</item>
+		<item>october</item>
+		<item>november</item>
+		<item>december</item>
+	</string-array>
+</resources>

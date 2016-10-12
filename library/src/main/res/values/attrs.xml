@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LightCalendarView">
+        <attr name="lcv_weekDayTextSize" format="dimension" />
+        <attr name="lcv_dayTextSize" format="dimension" />
+        <attr name="lcv_textColor" format="reference|color" />
+        <attr name="lcv_selectionColor" format="reference|color" />
+        <attr name="lcv_accentColor" format="reference|color" />
+    </declare-styleable>
+</resources>

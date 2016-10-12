@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>ರವಿ</item>
+		<item>ಸೋಮ</item>
+		<item>ಮಂಗಳ</item>
+		<item>ಬುಧ</item>
+		<item>ಗುರು</item>
+		<item>ಶುಕ್ರ</item>
+		<item>ಶನಿ</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>ರವಿವಾರ</item>
+		<item>ಸೋಮವಾರ</item>
+		<item>ಮಂಗಳವಾರ</item>
+		<item>ಬುಧವಾರ</item>
+		<item>ಗುರುವಾರ</item>
+		<item>ಶುಕ್ರವಾರ</item>
+		<item>ಶನಿವಾರ</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Jan</item>
+		<item>Feb</item>
+		<item>Mar</item>
+		<item>Apr</item>
+		<item>May</item>
+		<item>Jun</item>
+		<item>Jul</item>
+		<item>Aug</item>
+		<item>Sep</item>
+		<item>Oct</item>
+		<item>Nov</item>
+		<item>Dec</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>ಜನವರಿ</item>
+		<item>ಫೆಬ್ರವರಿ</item>
+		<item>ಮಾರ್ಚ್</item>
+		<item>ಏಪ್ರಿಲ್</item>
+		<item>ಮೇ</item>
+		<item>ಜೂನ್</item>
+		<item>ಜುಲೈ</item>
+		<item>ಆಗಸ್ಟ್</item>
+		<item>ಸೆಪ್ಟೆಂಬರ್</item>
+		<item>ಅಕ್ಟೋಬರ್</item>
+		<item>ನವಂಬರ್</item>
+		<item>ಡಿಸೆಂಬರ್</item>
+	</string-array>
+</resources>

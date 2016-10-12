@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>P</item>
+		<item>E</item>
+		<item>T</item>
+		<item>K</item>
+		<item>N</item>
+		<item>R</item>
+		<item>L</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>pühapäev</item>
+		<item>esmaspäev</item>
+		<item>teisipäev</item>
+		<item>kolmapäev</item>
+		<item>neljapäev</item>
+		<item>reede</item>
+		<item>laupäev</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>jaan.</item>
+		<item>veebr.</item>
+		<item>märts</item>
+		<item>apr.</item>
+		<item>mai</item>
+		<item>juuni</item>
+		<item>juuli</item>
+		<item>aug.</item>
+		<item>sept.</item>
+		<item>okt.</item>
+		<item>nov.</item>
+		<item>dets.</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>jaanuar</item>
+		<item>veebruar</item>
+		<item>märts</item>
+		<item>aprill</item>
+		<item>mai</item>
+		<item>juuni</item>
+		<item>juuli</item>
+		<item>august</item>
+		<item>september</item>
+		<item>oktoober</item>
+		<item>november</item>
+		<item>detsember</item>
+	</string-array>
+</resources>

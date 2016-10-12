@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>J2</item>
+		<item>J3</item>
+		<item>J4</item>
+		<item>J5</item>
+		<item>Al</item>
+		<item>Ij</item>
+		<item>J1</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Jumapili</item>
+		<item>Jumatatu</item>
+		<item>Jumanne</item>
+		<item>Jumatano</item>
+		<item>Alhamisi</item>
+		<item>Ijumaa</item>
+		<item>Jumamosi</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Jan</item>
+		<item>Feb</item>
+		<item>Mac</item>
+		<item>Apr</item>
+		<item>Mei</item>
+		<item>Jun</item>
+		<item>Jul</item>
+		<item>Ago</item>
+		<item>Sep</item>
+		<item>Okt</item>
+		<item>Nov</item>
+		<item>Des</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Mwezi wa kwanza</item>
+		<item>Mwezi wa pili</item>
+		<item>Mwezi wa tatu</item>
+		<item>Mwezi wa nne</item>
+		<item>Mwezi wa tano</item>
+		<item>Mwezi wa sita</item>
+		<item>Mwezi wa saba</item>
+		<item>Mwezi wa nane</item>
+		<item>Mwezi wa tisa</item>
+		<item>Mwezi wa kumi</item>
+		<item>Mwezi wa kumi na moja</item>
+		<item>Mwezi wa kumi na mbili</item>
+	</string-array>
+</resources>

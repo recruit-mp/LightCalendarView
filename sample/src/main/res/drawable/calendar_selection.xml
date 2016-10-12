@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_active="false" android:state_selected="false">
+        <color android:color="#7c7c7c" />
+    </item>
+    <item android:state_active="true" android:state_selected="false">
+        <color android:color="#000000" />
+    </item>
+    <item android:state_active="false" android:state_selected="true">
+        <color android:color="#ffffffff" />
+    </item>
+    <item android:state_active="true" android:state_selected="true">
+        <color android:color="#edeeff" />
+    </item>
+</selector>

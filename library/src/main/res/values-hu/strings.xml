@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>v.</item>
+		<item>h.</item>
+		<item>k.</item>
+		<item>sze.</item>
+		<item>cs.</item>
+		<item>p.</item>
+		<item>szo.</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>vasárnap</item>
+		<item>hétfő</item>
+		<item>kedd</item>
+		<item>szerda</item>
+		<item>csütörtök</item>
+		<item>péntek</item>
+		<item>szombat</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>jan.</item>
+		<item>febr.</item>
+		<item>márc.</item>
+		<item>ápr.</item>
+		<item>máj.</item>
+		<item>jún.</item>
+		<item>júl.</item>
+		<item>aug.</item>
+		<item>szept.</item>
+		<item>okt.</item>
+		<item>nov.</item>
+		<item>dec.</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>január</item>
+		<item>február</item>
+		<item>március</item>
+		<item>április</item>
+		<item>május</item>
+		<item>június</item>
+		<item>július</item>
+		<item>augusztus</item>
+		<item>szeptember</item>
+		<item>október</item>
+		<item>november</item>
+		<item>december</item>
+	</string-array>
+</resources>

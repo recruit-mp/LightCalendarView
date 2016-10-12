@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>일</item>
+		<item>월</item>
+		<item>화</item>
+		<item>수</item>
+		<item>목</item>
+		<item>금</item>
+		<item>토</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>일요일</item>
+		<item>월요일</item>
+		<item>화요일</item>
+		<item>수요일</item>
+		<item>목요일</item>
+		<item>금요일</item>
+		<item>토요일</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>1월</item>
+		<item>2월</item>
+		<item>3월</item>
+		<item>4월</item>
+		<item>5월</item>
+		<item>6월</item>
+		<item>7월</item>
+		<item>8월</item>
+		<item>9월</item>
+		<item>10월</item>
+		<item>11월</item>
+		<item>12월</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>1월</item>
+		<item>2월</item>
+		<item>3월</item>
+		<item>4월</item>
+		<item>5월</item>
+		<item>6월</item>
+		<item>7월</item>
+		<item>8월</item>
+		<item>9월</item>
+		<item>10월</item>
+		<item>11월</item>
+		<item>12월</item>
+	</string-array>
+</resources>

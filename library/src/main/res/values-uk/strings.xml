@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>нд.</item>
+		<item>пн.</item>
+		<item>вт.</item>
+		<item>ср.</item>
+		<item>чт.</item>
+		<item>пт.</item>
+		<item>сб.</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>неділя</item>
+		<item>понеділок</item>
+		<item>вівторок</item>
+		<item>середа</item>
+		<item>четвер</item>
+		<item>п\'ятниця</item>
+		<item>субота</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>січ.</item>
+		<item>лют.</item>
+		<item>бер.</item>
+		<item>квіт.</item>
+		<item>трав.</item>
+		<item>черв.</item>
+		<item>лип.</item>
+		<item>серп.</item>
+		<item>вер.</item>
+		<item>жовт.</item>
+		<item>лист.</item>
+		<item>груд.</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Січня</item>
+		<item>Лютого</item>
+		<item>Березня</item>
+		<item>Квітня</item>
+		<item>Травня</item>
+		<item>Червня</item>
+		<item>Липня</item>
+		<item>Серпня</item>
+		<item>Вересня</item>
+		<item>Жовтня</item>
+		<item>Листопада</item>
+		<item>Грудня</item>
+	</string-array>
+</resources>

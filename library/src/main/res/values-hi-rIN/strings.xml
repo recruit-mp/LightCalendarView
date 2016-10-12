@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>रवि</item>
+		<item>सोम</item>
+		<item>मंगल</item>
+		<item>बुध</item>
+		<item>गुरु</item>
+		<item>शुक्र</item>
+		<item>शनि</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>रविवार</item>
+		<item>सोमवार</item>
+		<item>मंगलवार</item>
+		<item>बुधवार</item>
+		<item>गुरुवार</item>
+		<item>शुक्रवार</item>
+		<item>शनिवार</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Jan</item>
+		<item>Feb</item>
+		<item>Mar</item>
+		<item>Apr</item>
+		<item>May</item>
+		<item>Jun</item>
+		<item>Jul</item>
+		<item>Aug</item>
+		<item>Sep</item>
+		<item>Oct</item>
+		<item>Nov</item>
+		<item>Dec</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>जनवरी</item>
+		<item>फरवरी</item>
+		<item>मार्च</item>
+		<item>अप्रैल</item>
+		<item>मई</item>
+		<item>जून</item>
+		<item>जुलाई</item>
+		<item>अगस्त</item>
+		<item>सितंबर</item>
+		<item>अक्टूबर</item>
+		<item>नवंबर</item>
+		<item>दिसंबर</item>
+	</string-array>
+</resources>

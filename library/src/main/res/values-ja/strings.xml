@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>日</item>
+		<item>月</item>
+		<item>火</item>
+		<item>水</item>
+		<item>木</item>
+		<item>金</item>
+		<item>土</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>日曜日</item>
+		<item>月曜日</item>
+		<item>火曜日</item>
+		<item>水曜日</item>
+		<item>木曜日</item>
+		<item>金曜日</item>
+		<item>土曜日</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>1月</item>
+		<item>2月</item>
+		<item>3月</item>
+		<item>4月</item>
+		<item>5月</item>
+		<item>6月</item>
+		<item>7月</item>
+		<item>8月</item>
+		<item>9月</item>
+		<item>10月</item>
+		<item>11月</item>
+		<item>12月</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>1月</item>
+		<item>2月</item>
+		<item>3月</item>
+		<item>4月</item>
+		<item>5月</item>
+		<item>6月</item>
+		<item>7月</item>
+		<item>8月</item>
+		<item>9月</item>
+		<item>10月</item>
+		<item>11月</item>
+		<item>12月</item>
+	</string-array>
+</resources>

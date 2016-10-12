@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Sv.</item>
+		<item>P.</item>
+		<item>O.</item>
+		<item>T.</item>
+		<item>C.</item>
+		<item>Pk.</item>
+		<item>S.</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>svētdiena</item>
+		<item>pirmdiena</item>
+		<item>otrdiena</item>
+		<item>trešdiena</item>
+		<item>ceturtdiena</item>
+		<item>piektdiena</item>
+		<item>sestdiena</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Janv</item>
+		<item>Febr</item>
+		<item>Marts</item>
+		<item>Apr</item>
+		<item>Maijs</item>
+		<item>Jūn</item>
+		<item>Jūl</item>
+		<item>Aug</item>
+		<item>Sept</item>
+		<item>Okt</item>
+		<item>Nov</item>
+		<item>Dec</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Janvāris</item>
+		<item>Februāris</item>
+		<item>Marts</item>
+		<item>Aprīlis</item>
+		<item>Maijs</item>
+		<item>Jūnijs</item>
+		<item>Jūlijs</item>
+		<item>Augusts</item>
+		<item>Septembris</item>
+		<item>Oktobris</item>
+		<item>Novembris</item>
+		<item>Decembris</item>
+	</string-array>
+</resources>

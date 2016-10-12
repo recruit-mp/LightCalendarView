@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>ned</item>
+		<item>pon</item>
+		<item>tor</item>
+		<item>sre</item>
+		<item>čet</item>
+		<item>pet</item>
+		<item>sob</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>nedelja</item>
+		<item>ponedeljek</item>
+		<item>torek</item>
+		<item>sreda</item>
+		<item>četrtek</item>
+		<item>petek</item>
+		<item>sobota</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>jan</item>
+		<item>feb</item>
+		<item>mar</item>
+		<item>apr</item>
+		<item>maj</item>
+		<item>jun</item>
+		<item>jul</item>
+		<item>avg</item>
+		<item>sep</item>
+		<item>okt</item>
+		<item>nov</item>
+		<item>dec</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>januar</item>
+		<item>februar</item>
+		<item>marec</item>
+		<item>april</item>
+		<item>maj</item>
+		<item>junij</item>
+		<item>julij</item>
+		<item>avgust</item>
+		<item>september</item>
+		<item>oktober</item>
+		<item>november</item>
+		<item>december</item>
+	</string-array>
+</resources>

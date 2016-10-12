@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Sul</item>
+		<item>Llun</item>
+		<item>Maw</item>
+		<item>Mer</item>
+		<item>Iau</item>
+		<item>Gwe</item>
+		<item>Sad</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Dydd Sul</item>
+		<item>Dydd Llun</item>
+		<item>Dydd Mawrth</item>
+		<item>Dydd Mercher</item>
+		<item>Dydd Iau</item>
+		<item>Dydd Gwener</item>
+		<item>Dydd Sadwrn</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Ion</item>
+		<item>Chw</item>
+		<item>Maw</item>
+		<item>Ebr</item>
+		<item>Mai</item>
+		<item>Meh</item>
+		<item>Gor</item>
+		<item>Awst</item>
+		<item>Med</item>
+		<item>Hyd</item>
+		<item>Tach</item>
+		<item>Rha</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Ionawr</item>
+		<item>Chwefror</item>
+		<item>Mawrth</item>
+		<item>Ebrill</item>
+		<item>Mai</item>
+		<item>Mehefin</item>
+		<item>Gorffennaf</item>
+		<item>Awst</item>
+		<item>Medi</item>
+		<item>Hydref</item>
+		<item>Tachwedd</item>
+		<item>Rhagfyr</item>
+	</string-array>
+</resources>

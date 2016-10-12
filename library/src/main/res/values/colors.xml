@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_calendar_view__week_day_sunday_text_color">#f24048</color>
+    <color name="light_calendar_view__week_day_saturday_text_color">#6a7793</color>
+    <color name="light_calendar_view__week_day_weekday_text_color">#686868</color>
+
+    <color name="light_calendar_view__day_ripple_color">#FF929292</color>
+    <color name="light_calendar_view__day_circle_color">#FF929292</color>
+    <color name="light_calendar_view__day_today_circle_color">#fedb34</color>
+    <color name="light_calendar_view__day_sunday_text_color">#f24048</color>
+    <color name="light_calendar_view__day_saturday_text_color">#6a7793</color>
+    <color name="light_calendar_view__day_weekday_text_color">#787878</color>
+    <color name="light_calendar_view__day_selected_text_color">#ffffff</color>
+    <color name="light_calendar_view__day_today_text_color">#fed200</color>
+    <color name="light_calendar_view__day_selected_today_text_color">#935f34</color>
+    <color name="light_calendar_view__day_dot_color">#885733</color>
+    <color name="light_calendar_view__day_selected_dot_color">#885733</color>
+    <color name="light_calendar_view__day_today_dot_color">#885733</color>
+    <color name="light_calendar_view__day_selected_today_dot_color">#885733</color>
+</resources>

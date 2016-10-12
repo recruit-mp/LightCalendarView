@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>ی</item>
+		<item>د</item>
+		<item>س</item>
+		<item>چ</item>
+		<item>پ</item>
+		<item>ج</item>
+		<item>ش</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>یکشنبه</item>
+		<item>دوشنبه</item>
+		<item>سه‌شنبه</item>
+		<item>چهارشنبه</item>
+		<item>پنج‌شنبه</item>
+		<item>جمعه</item>
+		<item>شنبه</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>ژانویه</item>
+		<item>فوریه</item>
+		<item>مارس</item>
+		<item>آوریل</item>
+		<item>مه</item>
+		<item>ژوئن</item>
+		<item>ژوئیه</item>
+		<item>اوت</item>
+		<item>سپتامبر</item>
+		<item>اکتبر</item>
+		<item>نوامبر</item>
+		<item>دسامبر</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>ژانویه</item>
+		<item>فوریه</item>
+		<item>مارس</item>
+		<item>آوریل</item>
+		<item>مه</item>
+		<item>ژوئن</item>
+		<item>ژوئیه</item>
+		<item>اوت</item>
+		<item>سپتامبر</item>
+		<item>اکتبر</item>
+		<item>نوامبر</item>
+		<item>دسامبر</item>
+	</string-array>
+</resources>

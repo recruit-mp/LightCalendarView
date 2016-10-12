@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>su</item>
+		<item>ma</item>
+		<item>ti</item>
+		<item>ke</item>
+		<item>to</item>
+		<item>pe</item>
+		<item>la</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>sunnuntai</item>
+		<item>maanantai</item>
+		<item>tiistai</item>
+		<item>keskiviikko</item>
+		<item>torstai</item>
+		<item>perjantai</item>
+		<item>lauantai</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>tammi</item>
+		<item>helmi</item>
+		<item>maalis</item>
+		<item>huhti</item>
+		<item>touko</item>
+		<item>kesä</item>
+		<item>heinä</item>
+		<item>elo</item>
+		<item>syys</item>
+		<item>loka</item>
+		<item>marras</item>
+		<item>joulu</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>tammikuu</item>
+		<item>helmikuu</item>
+		<item>maaliskuu</item>
+		<item>huhtikuu</item>
+		<item>toukokuu</item>
+		<item>kesäkuu</item>
+		<item>heinäkuu</item>
+		<item>elokuu</item>
+		<item>syyskuu</item>
+		<item>lokakuu</item>
+		<item>marraskuu</item>
+		<item>joulukuu</item>
+	</string-array>
+</resources>

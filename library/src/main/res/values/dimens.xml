@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="light_calendar_view__week_day_text_size">14sp</dimen>
+    <dimen name="light_calendar_view__day_text_size">18sp</dimen>
+    <dimen name="light_calendar_view__day_dot_radius">5dp</dimen>
+</resources>

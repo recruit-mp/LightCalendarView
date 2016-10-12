@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Κυρ</item>
+		<item>Δευ</item>
+		<item>Τρί</item>
+		<item>Τετ</item>
+		<item>Πέμ</item>
+		<item>Παρ</item>
+		<item>Σάβ</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Κυριακή</item>
+		<item>Δευτέρα</item>
+		<item>Τρίτη</item>
+		<item>Τετάρτη</item>
+		<item>Πέμπτη</item>
+		<item>Παρασκευή</item>
+		<item>Σάββατο</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Ιαν</item>
+		<item>Φεβ</item>
+		<item>Μαρ</item>
+		<item>Απρ</item>
+		<item>Μαϊ</item>
+		<item>Ιουν</item>
+		<item>Ιουλ</item>
+		<item>Αυγ</item>
+		<item>Σεπ</item>
+		<item>Οκτ</item>
+		<item>Νοε</item>
+		<item>Δεκ</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Ιανουάριος</item>
+		<item>Φεβρουάριος</item>
+		<item>Μάρτιος</item>
+		<item>Απρίλιος</item>
+		<item>Μάιος</item>
+		<item>Ιούνιος</item>
+		<item>Ιούλιος</item>
+		<item>Αύγουστος</item>
+		<item>Σεπτέμβριος</item>
+		<item>Οκτώβριος</item>
+		<item>Νοέμβριος</item>
+		<item>Δεκέμβριος</item>
+	</string-array>
+</resources>

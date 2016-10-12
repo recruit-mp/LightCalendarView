@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>nie</item>
+		<item>pon</item>
+		<item>wto</item>
+		<item>śro</item>
+		<item>czw</item>
+		<item>pią</item>
+		<item>sob</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>niedziela</item>
+		<item>poniedziałek</item>
+		<item>wtorek</item>
+		<item>środa</item>
+		<item>czwartek</item>
+		<item>piątek</item>
+		<item>sobota</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>sty</item>
+		<item>lut</item>
+		<item>mar</item>
+		<item>kwi</item>
+		<item>maj</item>
+		<item>cze</item>
+		<item>lip</item>
+		<item>sie</item>
+		<item>wrz</item>
+		<item>paź</item>
+		<item>lis</item>
+		<item>gru</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>styczeń</item>
+		<item>luty</item>
+		<item>marzec</item>
+		<item>kwiecień</item>
+		<item>maj</item>
+		<item>czerwiec</item>
+		<item>lipiec</item>
+		<item>sierpień</item>
+		<item>wrzesień</item>
+		<item>październik</item>
+		<item>listopad</item>
+		<item>grudzień</item>
+	</string-array>
+</resources>

@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>อา</item>
+		<item>จ</item>
+		<item>อ</item>
+		<item>พ</item>
+		<item>พฤ</item>
+		<item>ศ</item>
+		<item>ส</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>อาทิตย์</item>
+		<item>จันทร์</item>
+		<item>อังคาร</item>
+		<item>พุธ</item>
+		<item>พฤหัสบดี</item>
+		<item>ศุกร์</item>
+		<item>เสาร์</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>ม.ค.</item>
+		<item>ก.พ.</item>
+		<item>มี.ค.</item>
+		<item>เม.ย.</item>
+		<item>พ.ค.</item>
+		<item>มิ.ย.</item>
+		<item>ก.ค.</item>
+		<item>ส.ค.</item>
+		<item>ก.ย.</item>
+		<item>ต.ค.</item>
+		<item>พ.ย.</item>
+		<item>ธ.ค.</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>มกราคม</item>
+		<item>กุมภาพันธ์</item>
+		<item>มีนาคม</item>
+		<item>เมษายน</item>
+		<item>พฤษภาคม</item>
+		<item>มิถุนายน</item>
+		<item>กรกฎาคม</item>
+		<item>สิงหาคม</item>
+		<item>กันยายน</item>
+		<item>ตุลาคม</item>
+		<item>พฤศจิกายน</item>
+		<item>ธันวาคม</item>
+	</string-array>
+</resources>

@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Ya</item>
+		<item>Du</item>
+		<item>Sh</item>
+		<item>Ch</item>
+		<item>Pa</item>
+		<item>Ju</item>
+		<item>Sh</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>yakshanba</item>
+		<item>dushanba</item>
+		<item>seshanbe</item>
+		<item>chorshanba</item>
+		<item>payshanba</item>
+		<item>juma</item>
+		<item>shanba</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>yan.</item>
+		<item>fev.</item>
+		<item>mart</item>
+		<item>apr.</item>
+		<item>may</item>
+		<item>iyun</item>
+		<item>iyul</item>
+		<item>avg.</item>
+		<item>sen.</item>
+		<item>okt.</item>
+		<item>noy.</item>
+		<item>dek.</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>yanvar</item>
+		<item>fevral</item>
+		<item>mart</item>
+		<item>aprel</item>
+		<item>may</item>
+		<item>iyun</item>
+		<item>iyul</item>
+		<item>avgust</item>
+		<item>sentyabr</item>
+		<item>oktyabr</item>
+		<item>noyabr</item>
+		<item>dekabr</item>
+	</string-array>
+</resources>

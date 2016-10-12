@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Pzr</item>
+		<item>Pzt</item>
+		<item>Sal</item>
+		<item>Çrş</item>
+		<item>Prş</item>
+		<item>Cum</item>
+		<item>Cts</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Pazar</item>
+		<item>Pazartesi</item>
+		<item>Salı</item>
+		<item>Çarşamba</item>
+		<item>Perşembe</item>
+		<item>Cuma</item>
+		<item>Cumartesi</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Oca</item>
+		<item>Şub</item>
+		<item>Mar</item>
+		<item>Nis</item>
+		<item>May</item>
+		<item>Haz</item>
+		<item>Tem</item>
+		<item>Ağu</item>
+		<item>Eyl</item>
+		<item>Eki</item>
+		<item>Kas</item>
+		<item>Ara</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Ocak</item>
+		<item>Şubat</item>
+		<item>Mart</item>
+		<item>Nisan</item>
+		<item>Mayıs</item>
+		<item>Haziran</item>
+		<item>Temmuz</item>
+		<item>Ağustos</item>
+		<item>Eylül</item>
+		<item>Ekim</item>
+		<item>Kasım</item>
+		<item>Aralık</item>
+	</string-array>
+</resources>

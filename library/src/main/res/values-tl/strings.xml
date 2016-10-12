@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Lin</item>
+		<item>Lun</item>
+		<item>Mar</item>
+		<item>Miy</item>
+		<item>Huw</item>
+		<item>Biy</item>
+		<item>Sab</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Linggo</item>
+		<item>Lunes</item>
+		<item>Martes</item>
+		<item>Miyerkules</item>
+		<item>Huwebes</item>
+		<item>Biyernes</item>
+		<item>Sabado</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Ene</item>
+		<item>Peb</item>
+		<item>Mar</item>
+		<item>Abr</item>
+		<item>May</item>
+		<item>Hun</item>
+		<item>Hul</item>
+		<item>Ago</item>
+		<item>Set</item>
+		<item>Okt</item>
+		<item>Nob</item>
+		<item>Dis</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Enero</item>
+		<item>Pebrero</item>
+		<item>Marso</item>
+		<item>Abril</item>
+		<item>Mayo</item>
+		<item>Hunyo</item>
+		<item>Hulyo</item>
+		<item>Agosto</item>
+		<item>Setyembre</item>
+		<item>Oktubre</item>
+		<item>Nobyembre</item>
+		<item>Disyembre</item>
+	</string-array>
+</resources>

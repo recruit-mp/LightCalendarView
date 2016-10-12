@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>الأحد</item>
+		<item>الإثنين</item>
+		<item>الثّلاثاء</item>
+		<item>الأربعاء</item>
+		<item>الخميس</item>
+		<item>الجمعة</item>
+		<item>السّبت</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>الأحد</item>
+		<item>الإثنين</item>
+		<item>الثّلاثاء</item>
+		<item>الأربعاء</item>
+		<item>الخميس</item>
+		<item>الجمعة</item>
+		<item>السّبت</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>ينا</item>
+		<item>فبر</item>
+		<item>مار</item>
+		<item>أبر</item>
+		<item>ماي</item>
+		<item>يون</item>
+		<item>يول</item>
+		<item>أغس</item>
+		<item>سبت</item>
+		<item>أكت</item>
+		<item>نوف</item>
+		<item>ديس</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>يناير</item>
+		<item>فبراير</item>
+		<item>مارس</item>
+		<item>أبريل</item>
+		<item>مايو</item>
+		<item>يونيو</item>
+		<item>يوليو</item>
+		<item>أغسطس</item>
+		<item>سبتمبر</item>
+		<item>أكتوبر</item>
+		<item>نوفمبر</item>
+		<item>ديسمبر</item>
+	</string-array>
+</resources>

@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>B.</item>
+		<item>B.E.</item>
+		<item>Ç.A.</item>
+		<item>Ç.</item>
+		<item>C.A.</item>
+		<item>C.</item>
+		<item>Ş.</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Bazar</item>
+		<item>Bazar ertəsi</item>
+		<item>Çərşənbə axşamı</item>
+		<item>Çərşənbə</item>
+		<item>Cümə axşamı</item>
+		<item>Cümə</item>
+		<item>Şənbə</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Yan</item>
+		<item>Fev</item>
+		<item>Mar</item>
+		<item>Apr</item>
+		<item>May</item>
+		<item>İyn</item>
+		<item>İyl</item>
+		<item>Avq</item>
+		<item>Sen</item>
+		<item>Okt</item>
+		<item>Noy</item>
+		<item>Dek</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Yanvar</item>
+		<item>Fevral</item>
+		<item>Mart</item>
+		<item>Aprel</item>
+		<item>May</item>
+		<item>İyun</item>
+		<item>İyul</item>
+		<item>Avqust</item>
+		<item>Sentyabr</item>
+		<item>Oktyabr</item>
+		<item>Noyabr</item>
+		<item>Dekabr</item>
+	</string-array>
+</resources>

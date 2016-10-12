@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Sek</item>
+		<item>Pir</item>
+		<item>Ant</item>
+		<item>Tre</item>
+		<item>Ket</item>
+		<item>Pen</item>
+		<item>Šeš</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>sekmadienis</item>
+		<item>pirmadienis</item>
+		<item>antradienis</item>
+		<item>trečiadienis</item>
+		<item>ketvirtadienis</item>
+		<item>penktadienis</item>
+		<item>šeštadienis</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Sau</item>
+		<item>Vas</item>
+		<item>Kov</item>
+		<item>Bal</item>
+		<item>Geg</item>
+		<item>Bir</item>
+		<item>Lie</item>
+		<item>Rgp</item>
+		<item>Rgs</item>
+		<item>Spa</item>
+		<item>Lap</item>
+		<item>Grd</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>sausio</item>
+		<item>vasario</item>
+		<item>kovo</item>
+		<item>balandžio</item>
+		<item>gegužės</item>
+		<item>birželio</item>
+		<item>liepos</item>
+		<item>rugpjūčio</item>
+		<item>rugsėjo</item>
+		<item>spalio</item>
+		<item>lapkričio</item>
+		<item>gruodžio</item>
+	</string-array>
+</resources>

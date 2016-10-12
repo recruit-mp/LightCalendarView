@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>রবিবার</item>
+		<item>সোমবার</item>
+		<item>মঙ্গলবার</item>
+		<item>বুধবার</item>
+		<item>বৃহস্পতিবার</item>
+		<item>শুক্রবার</item>
+		<item>শনিবার</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>রবিবার</item>
+		<item>সোমবার</item>
+		<item>মঙ্গলবার</item>
+		<item>বুধবার</item>
+		<item>বৃহস্পতিবার</item>
+		<item>শুক্রবার</item>
+		<item>শনিবার</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>জানুয়ারি</item>
+		<item>ফেব্রুয়ারি</item>
+		<item>মার্চ</item>
+		<item>এপ্রিল</item>
+		<item>মে</item>
+		<item>জুন</item>
+		<item>জুলাই</item>
+		<item>অগাস্ট</item>
+		<item>সেপ্টেমবার</item>
+		<item>অক্টোবার</item>
+		<item>নভেম্বার</item>
+		<item>ডিসেম্বার</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>জানুয়ারি</item>
+		<item>ফেব্রুয়ারি</item>
+		<item>মার্চ</item>
+		<item>এপ্রিল</item>
+		<item>মে</item>
+		<item>জুন</item>
+		<item>জুলাই</item>
+		<item>অগাস্ট</item>
+		<item>সেপ্টেমবার</item>
+		<item>অক্টোবার</item>
+		<item>নভেম্বার</item>
+		<item>ডিসেম্বার</item>
+	</string-array>
+</resources>

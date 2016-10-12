@@ -1,0 +1,73 @@
+@startuml
+
+ViewPager <|-- LightCalendarView
+
+LightCalendarView "1"*--"1..n" MonthView
+LightCalendarView *-- Month
+
+MonthView "1"*--"1" WeekDayLayout
+MonthView "1"*--"1" DayLayout
+
+DayLayout "1"*--"1..n" EmptyView
+DayLayout "1"*--"1..n" DayView
+
+WeekDayLayout "1"*--"1..n" WeekDayView
+
+WeekDayView "1"*--"1" WeekDay
+
+CellLayout <|-- DayLayout
+CellLayout <|-- WeekDayLayout
+
+CellView <|-- EmptyView
+CellView <|-- DayView
+CellView <|-- WeekDayView
+
+ViewGroup <|-- CellLayout
+View <|-- CellView
+
+class CellLayout
+class CellView
+class DayLayout
+class DayView
+class EmptyView
+class LightCalendarView
+enum Month {
+    JANUARY
+    FEBRUARY
+    MARCH
+    APRIL
+    MAY
+    JUNE
+    JULY
+    AUGUST
+    SEPTEMBER
+    OCTOBER
+    NOVEMBER
+    DECEMBER
+}
+class MonthView
+enum WeekDay {
+    SUNDAY
+    MONDAY
+    TUESDAY
+    WEDNESDAY
+    THURSDAY
+    FRIDAY
+    SATURDAY
+}
+class WeekDayLayout
+class WeekDayView
+
+LightCalendarView "1"*--"1" CalendarSettings
+CellLayout "*"*--"1" CalendarSettings
+CellView "*"*--"1" CalendarSettings
+
+class CalendarSettings
+
+DayView "0..*"*--"0..*" Accent
+Accent <|-- DotAccent
+
+abstract class Accent
+class DotAccent
+
+@enduml

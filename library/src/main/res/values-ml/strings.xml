@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>ഞാ.</item>
+		<item>തി.</item>
+		<item>ചൊ.</item>
+		<item>ബു.</item>
+		<item>വ്യാ.</item>
+		<item>വെ.</item>
+		<item>ശ.</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>ഞായര്‍</item>
+		<item>തിങ്കള്‍</item>
+		<item>ചൊവ്വ</item>
+		<item>ബുധൻ</item>
+		<item>വ്യാഴം</item>
+		<item>വെള്ളി</item>
+		<item>ശനി</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>ജനു.</item>
+		<item>ഫെബ്ര.</item>
+		<item>മാർ.</item>
+		<item>എപ്രി.</item>
+		<item>മെയ്.</item>
+		<item>ജൂണ്‍.</item>
+		<item>ജൂലൈ.</item>
+		<item>ആഗ.</item>
+		<item>സെപ്തം.</item>
+		<item>ഒക്ടോ.</item>
+		<item>നവം.</item>
+		<item>ഡിസം.</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>ജനുവരി</item>
+		<item>ഫെബ്രുവരി</item>
+		<item>മാർച്ച്</item>
+		<item>ഏപ്രിൽ</item>
+		<item>മെയ്</item>
+		<item>ജൂണ്‍</item>
+		<item>ജൂലൈ</item>
+		<item>ഓഗസ്റ്റ്‌</item>
+		<item>സെപ്റ്റംബർ</item>
+		<item>ഒക്ടോബർ</item>
+		<item>നവംബർ</item>
+		<item>ഡിസംബർ</item>
+	</string-array>
+</resources>

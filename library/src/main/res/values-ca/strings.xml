@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Dg</item>
+		<item>Dl</item>
+		<item>Dm</item>
+		<item>Dc</item>
+		<item>Dj</item>
+		<item>Dv</item>
+		<item>Ds</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Diumenge</item>
+		<item>Dilluns</item>
+		<item>Dimarts</item>
+		<item>Dimecres</item>
+		<item>Dijous</item>
+		<item>Divendres</item>
+		<item>Dissabte</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Gen</item>
+		<item>Feb</item>
+		<item>Mar</item>
+		<item>Abr</item>
+		<item>Mai</item>
+		<item>Jun</item>
+		<item>Jul</item>
+		<item>Ago</item>
+		<item>Set</item>
+		<item>Oct</item>
+		<item>Nov</item>
+		<item>Des</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Gener</item>
+		<item>Febrer</item>
+		<item>Març</item>
+		<item>Abril</item>
+		<item>Maig</item>
+		<item>Juny</item>
+		<item>Juliol</item>
+		<item>Agost</item>
+		<item>Setembre</item>
+		<item>Octubre</item>
+		<item>Novembre</item>
+		<item>Desembre</item>
+	</string-array>
+</resources>

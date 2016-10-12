@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Вс</item>
+		<item>Пн</item>
+		<item>Вт</item>
+		<item>Ср</item>
+		<item>Чт</item>
+		<item>Пт</item>
+		<item>Сб</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>воскресенье</item>
+		<item>понедельник</item>
+		<item>вторник</item>
+		<item>среда</item>
+		<item>четверг</item>
+		<item>пятница</item>
+		<item>суббота</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>янв.</item>
+		<item>февр.</item>
+		<item>марта</item>
+		<item>апр.</item>
+		<item>мая</item>
+		<item>июня</item>
+		<item>июля</item>
+		<item>авг.</item>
+		<item>сент.</item>
+		<item>окт.</item>
+		<item>нояб.</item>
+		<item>дек.</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>января</item>
+		<item>февраля</item>
+		<item>марта</item>
+		<item>апреля</item>
+		<item>мая</item>
+		<item>июня</item>
+		<item>июля</item>
+		<item>августа</item>
+		<item>сентября</item>
+		<item>октября</item>
+		<item>ноября</item>
+		<item>декабря</item>
+	</string-array>
+</resources>

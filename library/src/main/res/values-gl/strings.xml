@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Dom</item>
+		<item>Lun</item>
+		<item>Mar</item>
+		<item>Mer</item>
+		<item>Xov</item>
+		<item>Ven</item>
+		<item>Sab</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Domingo</item>
+		<item>Luns</item>
+		<item>Martes</item>
+		<item>Mércores</item>
+		<item>Xoves</item>
+		<item>Venres</item>
+		<item>Sábado</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Xan</item>
+		<item>Feb</item>
+		<item>Mar</item>
+		<item>Abr</item>
+		<item>Mai</item>
+		<item>Xuñ</item>
+		<item>Xul</item>
+		<item>Ago</item>
+		<item>Set</item>
+		<item>Out</item>
+		<item>Nov</item>
+		<item>Dec</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Xaneiro</item>
+		<item>Febreiro</item>
+		<item>Marzo</item>
+		<item>Abril</item>
+		<item>Maio</item>
+		<item>Xuño</item>
+		<item>Xullo</item>
+		<item>Agosto</item>
+		<item>Setembro</item>
+		<item>Outubro</item>
+		<item>Novembro</item>
+		<item>Decembro</item>
+	</string-array>
+</resources>

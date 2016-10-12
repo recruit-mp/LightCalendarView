@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Chủ nhật</item>
+		<item>Thứ hai</item>
+		<item>Thứ ba</item>
+		<item>Thứ tư</item>
+		<item>Thứ năm</item>
+		<item>Thứ sáu</item>
+		<item>Thứ bảy</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Chủ nhật</item>
+		<item>Thứ hai</item>
+		<item>Thứ ba</item>
+		<item>Thứ tư</item>
+		<item>Thứ năm</item>
+		<item>Thứ sáu</item>
+		<item>Thứ bảy</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Tháng một</item>
+		<item>Tháng hai</item>
+		<item>Tháng ba</item>
+		<item>Tháng tư</item>
+		<item>Tháng năm</item>
+		<item>Tháng sáu</item>
+		<item>Tháng bảy</item>
+		<item>Tháng tám</item>
+		<item>Tháng chín</item>
+		<item>Tháng mười</item>
+		<item>Tháng mười một</item>
+		<item>Tháng mười hai</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Tháng một</item>
+		<item>Tháng hai</item>
+		<item>Tháng ba</item>
+		<item>Tháng tư</item>
+		<item>Tháng năm</item>
+		<item>Tháng sáu</item>
+		<item>Tháng bảy</item>
+		<item>Tháng tám</item>
+		<item>Tháng chín</item>
+		<item>Tháng mười</item>
+		<item>Tháng mười một</item>
+		<item>Tháng mười hai</item>
+	</string-array>
+</resources>

@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Dum</item>
+		<item>Lun</item>
+		<item>Mar</item>
+		<item>Mie</item>
+		<item>Joi</item>
+		<item>Vin</item>
+		<item>Sâm</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Duminică</item>
+		<item>Luni</item>
+		<item>Marți</item>
+		<item>Miercuri</item>
+		<item>Joi</item>
+		<item>Vineri</item>
+		<item>Sâmbată</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Ian</item>
+		<item>Feb</item>
+		<item>Mar</item>
+		<item>Apr</item>
+		<item>Mai</item>
+		<item>Iun</item>
+		<item>Iul</item>
+		<item>Aug</item>
+		<item>Sep</item>
+		<item>Oct</item>
+		<item>Noi</item>
+		<item>Dec</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Ianuarie</item>
+		<item>Februarie</item>
+		<item>Martie</item>
+		<item>Aprilie</item>
+		<item>Mai</item>
+		<item>Iunie</item>
+		<item>Iulie</item>
+		<item>August</item>
+		<item>Septembrie</item>
+		<item>Octombrie</item>
+		<item>Noiembrie</item>
+		<item>Decembrie</item>
+	</string-array>
+</resources>

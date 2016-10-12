@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Ня</item>
+		<item>Да</item>
+		<item>Мя</item>
+		<item>Лх</item>
+		<item>Пү</item>
+		<item>Ба</item>
+		<item>Бя</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Ням</item>
+		<item>Даваа</item>
+		<item>Мягмар</item>
+		<item>Лхагва</item>
+		<item>Пүрэв</item>
+		<item>Баасан</item>
+		<item>Бямба</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>1 сар</item>
+		<item>2 сар</item>
+		<item>3 сар</item>
+		<item>4 сар</item>
+		<item>5 сар</item>
+		<item>6 сар</item>
+		<item>7 сар</item>
+		<item>8 сар</item>
+		<item>9 сар</item>
+		<item>10 сар</item>
+		<item>11 сар</item>
+		<item>12 сар</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>1 сар</item>
+		<item>2 сар</item>
+		<item>3 сар</item>
+		<item>4 сар</item>
+		<item>5 сар</item>
+		<item>6 сар</item>
+		<item>7 сар</item>
+		<item>8 сар</item>
+		<item>9 сар</item>
+		<item>10 сар</item>
+		<item>11 сар</item>
+		<item>12 сар</item>
+	</string-array>
+</resources>

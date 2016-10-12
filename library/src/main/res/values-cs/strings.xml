@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Ne</item>
+		<item>Po</item>
+		<item>Út</item>
+		<item>St</item>
+		<item>Čt</item>
+		<item>Pá</item>
+		<item>So</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>neděle</item>
+		<item>pondělí</item>
+		<item>úterý</item>
+		<item>středa</item>
+		<item>čtvrtek</item>
+		<item>pátek</item>
+		<item>sobota</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>led</item>
+		<item>úno</item>
+		<item>bře</item>
+		<item>dub</item>
+		<item>kvě</item>
+		<item>čvn</item>
+		<item>čvc</item>
+		<item>srp</item>
+		<item>zář</item>
+		<item>říj</item>
+		<item>lis</item>
+		<item>pro</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>leden</item>
+		<item>únor</item>
+		<item>březen</item>
+		<item>duben</item>
+		<item>květen</item>
+		<item>červen</item>
+		<item>červenec</item>
+		<item>srpen</item>
+		<item>září</item>
+		<item>říjen</item>
+		<item>listopad</item>
+		<item>prosinec</item>
+	</string-array>
+</resources>

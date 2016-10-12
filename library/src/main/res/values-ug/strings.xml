@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>يەكشەنبە</item>
+		<item>دۈشەنبە</item>
+		<item>سەيشەنبە</item>
+		<item>چارشەنبە</item>
+		<item>پەيشەنبە</item>
+		<item>جۈمە</item>
+		<item>شەنبە</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>يەكشەنبە</item>
+		<item>دۈشەنبە</item>
+		<item>سەيشەنبە</item>
+		<item>چارشەنبە</item>
+		<item>پەيشەنبە</item>
+		<item>جۈمە</item>
+		<item>شەنبە</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>يانۋار</item>
+		<item>فېۋرال</item>
+		<item>مارت</item>
+		<item>ئاپرېل</item>
+		<item>ماي</item>
+		<item>ئىيۇن</item>
+		<item>ئىيۇل</item>
+		<item>ئاۋغۇست</item>
+		<item>سېنتەبىر</item>
+		<item>ئۆكتەبىر</item>
+		<item>نويابىر</item>
+		<item>دېكابىر</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>يانۋار</item>
+		<item>فېۋرال</item>
+		<item>مارت</item>
+		<item>ئاپرېل</item>
+		<item>ماي</item>
+		<item>ئىيۇن</item>
+		<item>ئىيۇل</item>
+		<item>ئاۋغۇست</item>
+		<item>سېنتەبىر</item>
+		<item>ئۆكتەبىر</item>
+		<item>نويابىر</item>
+		<item>دېكابىر</item>
+	</string-array>
+</resources>

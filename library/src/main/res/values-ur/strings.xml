@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>اتوار</item>
+		<item>سوموار</item>
+		<item>منگل</item>
+		<item>بدھ</item>
+		<item>جمعرات</item>
+		<item>جمعہ</item>
+		<item>ہفتہ</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>اتوار</item>
+		<item>سوموار</item>
+		<item>منگل</item>
+		<item>بدھ</item>
+		<item>جمعرات</item>
+		<item>جمعہ</item>
+		<item>ہفتہ</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>جنوری</item>
+		<item>فروری</item>
+		<item>مارچ</item>
+		<item>اپریل</item>
+		<item>مئی</item>
+		<item>جون</item>
+		<item>جولائی</item>
+		<item>اگست</item>
+		<item>ستمبر</item>
+		<item>اکتوبر</item>
+		<item>نومبر</item>
+		<item>دسمبر</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>جنوری</item>
+		<item>فروری</item>
+		<item>مارچ</item>
+		<item>اپریل</item>
+		<item>مئی</item>
+		<item>جون</item>
+		<item>جولائی</item>
+		<item>اگست</item>
+		<item>ستمبر</item>
+		<item>اکتوبر</item>
+		<item>نومبر</item>
+		<item>دسمبر</item>
+	</string-array>
+</resources>

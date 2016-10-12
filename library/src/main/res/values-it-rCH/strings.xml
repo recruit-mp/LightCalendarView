@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Dom</item>
+		<item>Lun</item>
+		<item>Mar</item>
+		<item>Mer</item>
+		<item>Gio</item>
+		<item>Ven</item>
+		<item>Sab</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Domenica</item>
+		<item>Lunedì</item>
+		<item>Martedì</item>
+		<item>Mercoledì</item>
+		<item>Giovedì</item>
+		<item>Venerdì</item>
+		<item>Sabato</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Gen</item>
+		<item>Feb</item>
+		<item>Mar</item>
+		<item>Apr</item>
+		<item>Mag</item>
+		<item>Giu</item>
+		<item>Lug</item>
+		<item>Ago</item>
+		<item>Set</item>
+		<item>Ott</item>
+		<item>Nov</item>
+		<item>Dic</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Gennaio</item>
+		<item>Febbraio</item>
+		<item>Marzo</item>
+		<item>Aprile</item>
+		<item>Maggio</item>
+		<item>Giugno</item>
+		<item>Luglio</item>
+		<item>Agosto</item>
+		<item>Settembre</item>
+		<item>Ottobre</item>
+		<item>Novembre</item>
+		<item>Dicembre</item>
+	</string-array>
+</resources>

@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>zo</item>
+		<item>ma</item>
+		<item>di</item>
+		<item>wo</item>
+		<item>do</item>
+		<item>vr</item>
+		<item>za</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>zondag</item>
+		<item>maandag</item>
+		<item>dinsdag</item>
+		<item>woensdag</item>
+		<item>donderdag</item>
+		<item>vrijdag</item>
+		<item>zaterdag</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>jan</item>
+		<item>feb</item>
+		<item>mrt</item>
+		<item>apr</item>
+		<item>mei</item>
+		<item>jun</item>
+		<item>jul</item>
+		<item>aug</item>
+		<item>sep</item>
+		<item>okt</item>
+		<item>nov</item>
+		<item>dec</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>januari</item>
+		<item>februari</item>
+		<item>maart</item>
+		<item>april</item>
+		<item>mei</item>
+		<item>juni</item>
+		<item>juli</item>
+		<item>augustus</item>
+		<item>september</item>
+		<item>oktober</item>
+		<item>november</item>
+		<item>december</item>
+	</string-array>
+</resources>

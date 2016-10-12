@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Якш</item>
+		<item>Дүш</item>
+		<item>Сиш</item>
+		<item>Чәр</item>
+		<item>Пән</item>
+		<item>Җом</item>
+		<item>Шим</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>якшәмбе</item>
+		<item>дүшәмбе</item>
+		<item>сишәмбе</item>
+		<item>чәршәмбе</item>
+		<item>пәнҗешәмбе</item>
+		<item>җомга</item>
+		<item>шимбә</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>гыйн.</item>
+		<item>февр.</item>
+		<item>март</item>
+		<item>апр.</item>
+		<item>май</item>
+		<item>июнь</item>
+		<item>июль</item>
+		<item>авг.</item>
+		<item>сент.</item>
+		<item>окт.</item>
+		<item>нояб.</item>
+		<item>дек.</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>гыйнвар</item>
+		<item>февраль</item>
+		<item>март</item>
+		<item>апрель</item>
+		<item>май</item>
+		<item>июнь</item>
+		<item>июль</item>
+		<item>август</item>
+		<item>сентябрь</item>
+		<item>октябрь</item>
+		<item>ноябрь</item>
+		<item>декабрь</item>
+	</string-array>
+</resources>

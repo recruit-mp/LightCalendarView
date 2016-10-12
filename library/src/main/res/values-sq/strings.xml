@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>E Diel</item>
+		<item>E Hënë</item>
+		<item>E Martë</item>
+		<item>E Mërkurë</item>
+		<item>E Enjte</item>
+		<item>E Premte</item>
+		<item>E Shtunë</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>E Diel</item>
+		<item>E Hënë</item>
+		<item>E Martë</item>
+		<item>E Mërkurë</item>
+		<item>E Enjte</item>
+		<item>E Premte</item>
+		<item>E Shtunë</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Janar</item>
+		<item>Shkurt</item>
+		<item>Mars</item>
+		<item>Prill</item>
+		<item>Maj</item>
+		<item>Qershor</item>
+		<item>Korrik</item>
+		<item>Gusht</item>
+		<item>Shtator</item>
+		<item>Tetor</item>
+		<item>Nëntor</item>
+		<item>Dhjetor</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Janar</item>
+		<item>Shkurt</item>
+		<item>Mars</item>
+		<item>Prill</item>
+		<item>Maj</item>
+		<item>Qershor</item>
+		<item>Korrik</item>
+		<item>Gusht</item>
+		<item>Shtator</item>
+		<item>Tetor</item>
+		<item>Nëntor</item>
+		<item>Dhjetor</item>
+	</string-array>
+</resources>

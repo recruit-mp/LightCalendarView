@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>ອາທິດ</item>
+		<item>ຈັນ</item>
+		<item>ອັງຄານ</item>
+		<item>ພຸດ</item>
+		<item>ພະຫັດ</item>
+		<item>ສຸກ</item>
+		<item>ເສົາ</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>ອາທິດ</item>
+		<item>ຈັນ</item>
+		<item>ອັງຄານ</item>
+		<item>ພຸດ</item>
+		<item>ພະຫັດ</item>
+		<item>ສຸກ</item>
+		<item>ເສົາ</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>ມັງກອນ</item>
+		<item>ກຸມພາ</item>
+		<item>ມີນາ</item>
+		<item>ເມສາ</item>
+		<item>ພຶດສະພາ</item>
+		<item>ມິຖຸນາ</item>
+		<item>ກໍລະກົດ</item>
+		<item>ສິງຫາ</item>
+		<item>ກັນຍາ</item>
+		<item>ຕຸລາ</item>
+		<item>ພະຈິກ</item>
+		<item>ທັນວາ</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>ມັງກອນ</item>
+		<item>ກຸມພາ</item>
+		<item>ມີນາ</item>
+		<item>ເມສາ</item>
+		<item>ພຶດສະພາ</item>
+		<item>ມິຖຸນາ</item>
+		<item>ກໍລະກົດ</item>
+		<item>ສິງຫາ</item>
+		<item>ກັນຍາ</item>
+		<item>ຕຸລາ</item>
+		<item>ພະຈິກ</item>
+		<item>ທັນວາ</item>
+	</string-array>
+</resources>

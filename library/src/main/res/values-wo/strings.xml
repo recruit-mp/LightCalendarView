@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Dib</item>
+		<item>Alt</item>
+		<item>Tal</item>
+		<item>All</item>
+		<item>Alx</item>
+		<item>Ajj</item>
+		<item>Gaw</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Dibèer</item>
+		<item>Altine</item>
+		<item>Talaata</item>
+		<item>Allarba</item>
+		<item>Alxamess</item>
+		<item>Ajjouma</item>
+		<item>Gaawu</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Jan</item>
+		<item>Feb</item>
+		<item>Mar</item>
+		<item>Apr</item>
+		<item>May</item>
+		<item>Jun</item>
+		<item>Jul</item>
+		<item>Aug</item>
+		<item>Sep</item>
+		<item>Oct</item>
+		<item>Nov</item>
+		<item>Dec</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Tamkharit</item>
+		<item>Digui Gamou</item>
+		<item>Gamou</item>
+		<item>Raki Gamou</item>
+		<item>Rakati Gamou</item>
+		<item>Mamou Kor</item>
+		<item>Ndeyou Kor</item>
+		<item>Baraxlou</item>
+		<item>Kor</item>
+		<item>Kori</item>
+		<item>Digui Tabaski</item>
+		<item>Tabaski</item>
+	</string-array>
+</resources>

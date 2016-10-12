@@ -1,0 +1,48 @@
+<resources>
+	<string-array name="week_days_short">
+		<item>Igan</item>
+		<item>Astel</item>
+		<item>Astear</item>
+		<item>Asteaz</item>
+		<item>Oste</item>
+		<item>Osti</item>
+		<item>Lar</item>
+	</string-array>
+	<string-array name="week_days_full">
+		<item>Igandea</item>
+		<item>Astelehena</item>
+		<item>Asteartea</item>
+		<item>Asteazkena</item>
+		<item>Osteguna</item>
+		<item>Ostirala</item>
+		<item>Larunbata</item>
+	</string-array>
+	<string-array name="months_short">
+		<item>Urt</item>
+		<item>Ots</item>
+		<item>Mar</item>
+		<item>Api</item>
+		<item>Mai</item>
+		<item>Eka</item>
+		<item>Uzt</item>
+		<item>Abu</item>
+		<item>Ira</item>
+		<item>Urr</item>
+		<item>Aza</item>
+		<item>Aben</item>
+	</string-array>
+	<string-array name="months_full">
+		<item>Urtarrila</item>
+		<item>Otsaila</item>
+		<item>Martxoa</item>
+		<item>Apirila</item>
+		<item>Maiatza</item>
+		<item>Ekaina</item>
+		<item>Uztaila</item>
+		<item>Abuztua</item>
+		<item>Iraila</item>
+		<item>Urria</item>
+		<item>Azaroa</item>
+		<item>Abendua</item>
+	</string-array>
+</resources>
