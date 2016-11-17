@@ -5,7 +5,7 @@
 A lightweight monthly calendar view for Android, fully written in Kotlin. Designed to meet the minimum demands for typical calendars.
 
 <img alt="screenshot" src="https://cloud.githubusercontent.com/assets/21093614/18807459/a6692ca4-8282-11e6-921d-1ea46c545ed4.gif" width="300" />
- 
+
 ## Requirements
 * Target SDK version: 23
 * Minimum SDK version: 15
@@ -14,14 +14,8 @@ A lightweight monthly calendar view for Android, fully written in Kotlin. Design
 
 1) Add these settings to your app-level **build.gradle**.
 ```groovy
-repositories {
-    maven {
-        url "https://jitpack.io"
-    }
-}
-
 dependencies {
-    compile 'com.github.recruit_mp:LightCalendarView:1.0'
+    compile 'com.github.recruit_mp:LightCalendarView:1.0.0'
 }
 ```
 
@@ -78,13 +72,13 @@ The customizations of text colors of selected days or today are done by setting 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- the color of today when selected -->
     <item android:color="#ffd2d2" android:state_active="true" android:state_selected="true" />
-    
+
     <!-- the color of today -->
     <item android:color="#c417ce" android:state_active="true" />
-    
+
     <!-- the color of the selected day -->
     <item android:color="#ffffff" android:state_selected="true" />
-    
+
     <!-- the color of other days -->
     <item android:color="#7c7c7c" />
 </selector>
@@ -95,7 +89,7 @@ The customizations of text colors of selected days or today are done by setting 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- the background color of today when selected -->
     <item android:color="#3944ba" android:state_active="true" android:state_selected="true" />
-    
+
     <!-- the background color of the other days when selected -->
     <item android:color="#565656" android:state_selected="true" />
 </selector>
@@ -106,13 +100,13 @@ The customizations of text colors of selected days or today are done by setting 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- the color of accents in today when selected -->
     <item android:color="#ffd2d2" android:state_active="true" android:state_selected="true" />
-    
+
     <!-- the color of accents in today -->
     <item android:color="#c417ce" android:state_active="true" />
-    
+
     <!-- the color of accents in other days when selected -->
     <item android:color="#ffffff" android:state_selected="true" />
-    
+
     <!-- the color of accents in other days -->
     <item android:color="#7c7c7c" />
 </selector>
