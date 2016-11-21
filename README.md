@@ -15,7 +15,7 @@ A lightweight monthly calendar view for Android, fully written in Kotlin. Design
 1) Add these settings to your app-level **build.gradle**.
 ```groovy
 dependencies {
-    compile 'com.github.recruit_mp:LightCalendarView:1.0.0'
+    compile 'jp.co.recruit_mp:LightCalendarView:1.0.0'
 }
 ```
 
