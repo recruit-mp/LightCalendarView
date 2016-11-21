@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.recruit_mp:LightCalendarView:1.0'
+    compile 'com.github.recruit_mp:LightCalendarView:1.0.0'
 }
 ```
 
