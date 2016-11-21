@@ -1,5 +1,6 @@
 # Light Calendar View
 
+[![Release](https://img.shields.io/github/release/recruit-mp/LightCalendarView.svg?label=maven%20version)](https://github.com/recruit-mp/LightCalendarView)
 [![License](https://img.shields.io/hexpm/l/plug.svg)]()
 
 A lightweight monthly calendar view for Android, fully written in Kotlin. Designed to meet the minimum demands for typical calendars.
@@ -135,6 +136,10 @@ calendarView.setOnStateUpdatedListener(object : LightCalendarView.OnStateUpdated
     }
 }
 ```
+
+### Further Customizations
+
+See [the Wiki](https://github.com/recruit-mp/LightCalendarView/wiki) for more information and descriptions on futher customizations.
 
 ## Contributing
 Contributions to this library, including bug-reporting, bug-fixes, and enhancements are always welcomed. Just create an issue, fork us and send a pull request.
