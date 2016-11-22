@@ -1,5 +1,6 @@
 # Light Calendar View
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-LightCalendarView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/4696#)
 [![Release](https://img.shields.io/github/release/recruit-mp/LightCalendarView.svg?label=maven%20version)](https://github.com/recruit-mp/LightCalendarView)
 [![License](https://img.shields.io/hexpm/l/plug.svg)]()
 
