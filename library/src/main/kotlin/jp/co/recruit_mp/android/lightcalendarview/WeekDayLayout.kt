@@ -17,6 +17,7 @@
 package jp.co.recruit_mp.android.lightcalendarview
 
 import android.content.Context
+import java.util.*
 
 /**
  * 月カレンダー内の曜日ラベルを表示する {@link ViewGroup}
@@ -32,9 +33,39 @@ class WeekDayLayout(context: Context, settings: CalendarSettings) : CellLayout(c
     override val colNum: Int
         get() = DEFAULT_DAYS_IN_WEEK
 
-    init {
-        val weekDayOffset = WeekDay.values().indexOf(settings.firstDayOfWeek)
+    var weekDayOffset: Int = -1
 
+    init {
+        updateLayout()
+    }
+
+    private val observer = Observer { observable, any ->
+        updateLayout()
+    }
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        settings.addObserver(observer)
+    }
+
+    override fun onDetachedFromWindow() {
+        settings.deleteObserver(observer)
+        super.onDetachedFromWindow()
+    }
+
+    private fun updateLayout() {
+        if (weekDayOffset != settings.weekDayOffset) {
+            weekDayOffset = settings.weekDayOffset
+
+            // remove all children
+            removeAllViews()
+
+            // populate children
+            populateViews()
+        }
+    }
+
+    private fun populateViews() {
         // add WeekDayViews in 7x1 grid
         WeekDay.getPermutation(weekDayOffset).forEach { weekDay ->
             addView(WeekDayView(context, settings, weekDay))
