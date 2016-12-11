@@ -95,7 +95,7 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
     }
 
     private fun populateViews() {
-        val cal = firstDate
+        val cal = firstDate.clone() as Calendar
 
         // 7 x 6 マスの DayView を追加する
         (0..rowNum - 1).forEach {
