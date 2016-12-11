@@ -30,6 +30,7 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
 
     val weekDayView = WeekDayView(observer)
     val dayView = DayView(observer)
+    var firstDayOfWeek: WeekDay = WeekDay.SUNDAY
 
     /**
      * Settings for {@link jp.co.recruit_mp.android.lightcalendarview.WeekDayView}

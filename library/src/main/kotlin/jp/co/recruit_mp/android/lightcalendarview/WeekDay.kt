@@ -34,9 +34,15 @@ enum class WeekDay {
     companion object {
         val ordinals = values()
         fun fromOrdinal(ordinal: Int) = ordinals[ordinal]
+
+        /**
+         * Returns the rearranged WeekDay values by sliding elements by n times
+         *
+         * @param n number of times to slide elements
+         */
+        fun getPermutation(n: Int) = values().let { it.slice((0..it.size - 1).map { i -> (i + n) % it.size }) }
     }
 
     fun getShortLabel(context: Context): String = context.getStringArray(R.array.week_days_short)[ordinal]
     fun getLabel(context: Context): String = context.getStringArray(R.array.week_days_full)[ordinal]
-
 }

@@ -51,8 +51,9 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
         thisYear = cal[Calendar.YEAR]
         thisMonth = cal[Calendar.MONTH]
 
-        // 左上セルの日付を計算
-        cal.add(Calendar.DAY_OF_YEAR, -cal[Calendar.DAY_OF_WEEK] + 1)
+        // calculate the date of the top-left cell
+        val weekDayOffset = WeekDay.values().indexOf(settings.firstDayOfWeek)
+        cal.add(Calendar.DAY_OF_YEAR, -cal[Calendar.DAY_OF_WEEK] + weekDayOffset + 1)
         firstDate = cal.time
 
         // 7 x 6 マスの DayView を追加する

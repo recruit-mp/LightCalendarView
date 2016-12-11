@@ -33,10 +33,11 @@ class WeekDayLayout(context: Context, settings: CalendarSettings) : CellLayout(c
         get() = DEFAULT_DAYS_IN_WEEK
 
     init {
-        // 7 x 1 マスの WeekDayView を追加する
-        WeekDay.values().forEach { weekDay ->
+        val weekDayOffset = WeekDay.values().indexOf(settings.firstDayOfWeek)
+
+        // add WeekDayViews in 7x1 grid
+        WeekDay.getPermutation(weekDayOffset).forEach { weekDay ->
             addView(WeekDayView(context, settings, weekDay))
         }
     }
-
 }
