@@ -40,7 +40,10 @@ enum class WeekDay {
          *
          * @param n number of times to slide elements
          */
-        fun getPermutation(n: Int) = values().let { it.slice((0..it.size - 1).map { i -> (i + n) % it.size }) }
+        fun getPermutation(n: Int): List<WeekDay> = values().let {
+            val indices = it.size.let { size -> (0..size - 1).map { i -> (i + n) % size } }
+            return it.slice(indices)
+        }
     }
 
     fun getShortLabel(context: Context): String = context.getStringArray(R.array.week_days_short)[ordinal]

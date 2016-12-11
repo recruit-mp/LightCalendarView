@@ -40,7 +40,7 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
 
     internal var callback: Callback? = null
     private var firstDate: Calendar = Calendar.getInstance()
-    private var weekDayOffset: Int = -1
+    private var dayOfWeekOffset: Int = -1
     private val thisYear: Int
     private val thisMonth: Int
 
@@ -74,16 +74,15 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
     }
 
     private fun updateLayout() {
-        if (weekDayOffset != settings.weekDayOffset) {
-            weekDayOffset = settings.weekDayOffset
+        if (dayOfWeekOffset != settings.dayOfWeekOffset) {
+            dayOfWeekOffset = settings.dayOfWeekOffset
 
+            // calculate the date of top-left cell
             val cal: Calendar = Calendar.getInstance().apply {
                 time = month
                 set(Calendar.DAY_OF_MONTH, 1)
+                add(Calendar.DAY_OF_YEAR, -this[Calendar.DAY_OF_WEEK] + dayOfWeekOffset + 1)
             }
-
-            // calculate the date of top-left cell
-            cal.add(Calendar.DAY_OF_YEAR, -cal[Calendar.DAY_OF_WEEK] + weekDayOffset + 1)
             firstDate = cal
 
             // remove all children

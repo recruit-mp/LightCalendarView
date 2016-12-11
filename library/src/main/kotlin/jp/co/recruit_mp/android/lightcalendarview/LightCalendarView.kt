@@ -216,17 +216,17 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     }
 
     /**
-     * Sets the first day of week
+     * First day of the week (e.g. Sunday, Monday, ...)
      */
-    fun setFirstDayOfWeek(weekDay: WeekDay) {
-        settings.apply {
-            firstDayOfWeek = weekDay
-            notifySettingsChanged()
+    var firstDayOfWeek: WeekDay
+        get() = settings.firstDayOfWeek
+        set(value) {
+            settings.firstDayOfWeek = value
+            settings.notifySettingsChanged()
         }
-    }
 
     private fun setFirstDayOfWeek(n: Int) {
-        setFirstDayOfWeek(WeekDay.fromOrdinal(n))
+        firstDayOfWeek = WeekDay.fromOrdinal(n)
     }
 
     private inner class Adapter() : PagerAdapter() {

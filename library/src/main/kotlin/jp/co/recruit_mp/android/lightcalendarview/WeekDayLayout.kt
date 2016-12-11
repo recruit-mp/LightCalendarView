@@ -33,7 +33,7 @@ class WeekDayLayout(context: Context, settings: CalendarSettings) : CellLayout(c
     override val colNum: Int
         get() = DEFAULT_DAYS_IN_WEEK
 
-    var weekDayOffset: Int = -1
+    var dayOfWeekOffset: Int = -1
 
     init {
         updateLayout()
@@ -54,8 +54,8 @@ class WeekDayLayout(context: Context, settings: CalendarSettings) : CellLayout(c
     }
 
     private fun updateLayout() {
-        if (weekDayOffset != settings.weekDayOffset) {
-            weekDayOffset = settings.weekDayOffset
+        if (dayOfWeekOffset != settings.dayOfWeekOffset) {
+            dayOfWeekOffset = settings.dayOfWeekOffset
 
             // remove all children
             removeAllViews()
@@ -67,7 +67,7 @@ class WeekDayLayout(context: Context, settings: CalendarSettings) : CellLayout(c
 
     private fun populateViews() {
         // add WeekDayViews in 7x1 grid
-        WeekDay.getPermutation(weekDayOffset).forEach { weekDay ->
+        WeekDay.getPermutation(dayOfWeekOffset).forEach { weekDay ->
             addView(WeekDayView(context, settings, weekDay))
         }
     }
