@@ -214,6 +214,26 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
         }
     }
 
+    /**
+     * Sets color of a weekday of the week
+     */
+    fun setWeekDayFilterColor(weekDay: WeekDay, color: Int?) {
+        settings.weekDayView.apply {
+            setTextFilterColor(weekDay, color)
+            notifySettingsChanged()
+        }
+    }
+
+    /**
+     * Sets color of a day of the week
+     */
+    fun setDayFilterColor(weekDay: WeekDay, color: Int?) {
+        settings.dayView.apply {
+            setTextFilterColor(weekDay, color)
+            notifySettingsChanged()
+        }
+    }
+
     private inner class Adapter() : PagerAdapter() {
         override fun instantiateItem(container: ViewGroup?, position: Int): View {
             val view = MonthView(context, settings, getDateForPosition(position)).apply {
