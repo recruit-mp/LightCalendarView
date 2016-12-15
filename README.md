@@ -138,6 +138,20 @@ calendarView.setOnStateUpdatedListener(object : LightCalendarView.OnStateUpdated
 }
 ```
 
+### Coloring Day of The Week
+
+Use `LightCalendarView#setWeekDayFilterColor(weekDay: WeekDay, color: Int?)` and `LightCalendarView#setDayFilterColor(weekDay: WeekDay, color: Int?)` to set the color scheme of day of the week in WeekDayView (e.g. Sunday, Monday, ...) and DayView (e.g. 1, 2, ...) respectively.
+
+```kotlin
+// coloring "sunday" (day of the week) in red
+calendarView.setWeekDayFilterColor(WeekDay.SUNDAY, Color.RED)
+
+// coloring sundays (days) in red
+calendarView.setDayFilterColor(WeekDay.SUNDAY, Color.RED)
+```
+
+Note the library internally uses these color as ColorFilter, meaning it is overlayed on top of the text color set through `LightCalendarView#setTextColor(color: Int)`.
+
 ### Further Customizations
 
 See [the Wiki](https://github.com/recruit-mp/LightCalendarView/wiki) for more information and descriptions on futher customizations.
