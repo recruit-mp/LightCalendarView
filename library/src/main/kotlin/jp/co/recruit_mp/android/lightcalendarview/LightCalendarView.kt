@@ -58,12 +58,12 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
             setCurrentItem(getPositionForDate(value))
         }
 
-    var monthFrom: Date = Calendar.getInstance().apply { set(Date().fiscalYear, Calendar.APRIL, 1) }.time
+    var monthFrom: Date = Calendar.getInstance(settings.locale).apply { set(Date().getFiscalYear(settings), Calendar.APRIL, 1) }.time
         set(value) {
             field = value
             adapter.notifyDataSetChanged()
         }
-    var monthTo: Date = Calendar.getInstance().apply { set(monthFrom.fiscalYear + 1, Calendar.MARCH, 1) }.time
+    var monthTo: Date = Calendar.getInstance(settings.locale).apply { set(monthFrom.getFiscalYear(settings) + 1, Calendar.MARCH, 1) }.time
         set(value) {
             field = value
             adapter.notifyDataSetChanged()
@@ -119,12 +119,12 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     /**
      * {@link ViewPager} のページに対応する月を返す
      */
-    fun getDateForPosition(position: Int): Date = monthFrom.add(Calendar.MONTH, position)
+    fun getDateForPosition(position: Int): Date = monthFrom.add(settings, Calendar.MONTH, position)
 
     /**
      * 月に対応する {@link ViewPager} のページを返す
      */
-    fun getPositionForDate(date: Date): Int = date.monthsAfter(monthFrom).toInt()
+    fun getPositionForDate(date: Date): Int = date.monthsAfter(settings, monthFrom).toInt()
 
     /**
      * {@link ViewPager} の特定のページにある {@link MonthView} を返す
@@ -214,6 +214,32 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
         }
     }
 
+    /**
+     * Sets the timezone to use in LightCalendarView.
+     * Set null to use TimeZone.getDefault()
+     */
+    var timeZone: TimeZone?
+        get() = settings.timeZone
+        set(value) {
+            settings.apply {
+                timeZone = value ?: TimeZone.getDefault()
+                notifySettingsChanged()
+            }
+        }
+
+    /**
+     * Sets the locale to use in LightCalendarView.
+     * Set null to use Locale.getDefault()
+     */
+    var locale: Locale?
+        get() = settings.locale
+        set(value) {
+            settings.apply {
+                locale = value ?: Locale.getDefault()
+                notifySettingsChanged()
+            }
+        }
+
     private inner class Adapter() : PagerAdapter() {
         override fun instantiateItem(container: ViewGroup?, position: Int): View {
             val view = MonthView(context, settings, getDateForPosition(position)).apply {
@@ -235,7 +261,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
 
         override fun isViewFromObject(view: View?, obj: Any?): Boolean = view === obj
 
-        override fun getCount(): Int = Math.max(0, monthTo.monthsAfter(monthFrom).toInt() + 1)
+        override fun getCount(): Int = Math.max(0, monthTo.monthsAfter(settings, monthFrom).toInt() + 1)
     }
 
     interface OnStateUpdatedListener {

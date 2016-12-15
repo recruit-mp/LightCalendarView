@@ -44,7 +44,7 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
     val thisMonth: Int
 
     init {
-        val cal: Calendar = Calendar.getInstance().apply {
+        val cal: Calendar = Calendar.getInstance(settings.locale).apply {
             time = month
             set(Calendar.DAY_OF_MONTH, 1)
         }

@@ -30,6 +30,8 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
 
     val weekDayView = WeekDayView(observer)
     val dayView = DayView(observer)
+    var timeZone: TimeZone = TimeZone.getDefault()
+    var locale: Locale = Locale.getDefault()
 
     /**
      * Settings for {@link jp.co.recruit_mp.android.lightcalendarview.WeekDayView}
