@@ -223,8 +223,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
         set(value) {
             settings.apply {
                 timeZone = value ?: TimeZone.getDefault()
-                notifySettingsChanged()
-            }
+            }.notifySettingsChanged()
         }
 
     /**
@@ -236,8 +235,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
         set(value) {
             settings.apply {
                 locale = value ?: Locale.getDefault()
-                notifySettingsChanged()
-            }
+            }.notifySettingsChanged()
         }
 
     private inner class Adapter() : PagerAdapter() {
