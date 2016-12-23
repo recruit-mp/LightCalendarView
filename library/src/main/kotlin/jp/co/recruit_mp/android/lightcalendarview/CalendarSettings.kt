@@ -253,5 +253,5 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
     private fun Paint.copy(): Paint = Paint(this).apply { typeface = this@copy.typeface }
 
     /** Converts a map to a mutable map */
-    private fun <K, V> Iterable<Pair<K, V>>.toMutableMap(): MutableMap<K, V> = mutableMapOf<K, V>().apply { putAll(this@toMutableMap) }
+    private fun <K, V> Iterable<Pair<K, V>>.toMutableMap(): MutableMap<K, V> where K: WeekDay, V: Int? = mutableMapOf<K, V>().apply { putAll(this@toMutableMap) }
 }

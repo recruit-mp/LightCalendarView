@@ -148,8 +148,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     private fun setWeekDayRawTextSize(size: Float) {
         settings.weekDayView.apply {
             textSize = size
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -162,8 +161,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     private fun setDayRawTextSize(size: Float) {
         settings.dayView.apply {
             textSize = size
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -172,12 +170,10 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setTextColor(color: Int) {
         settings.weekDayView.apply {
             textColor = color
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
         settings.dayView.apply {
             textColor = color
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -186,12 +182,10 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setTextColor(colorStateList: ColorStateList) {
         settings.weekDayView.apply {
             setTextColorStateList(colorStateList)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
         settings.dayView.apply {
             setTextColorStateList(colorStateList)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -200,8 +194,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setSelectionColor(colorStateList: ColorStateList) {
         settings.dayView.apply {
             setCircleColorStateList(colorStateList)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -210,8 +203,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setAccentColor(colorStateList: ColorStateList) {
         settings.dayView.apply {
             setAccentColorStateList(colorStateList)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -220,8 +212,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setWeekDayFilterColor(weekDay: WeekDay, color: Int?) {
         settings.weekDayView.apply {
             setTextFilterColor(weekDay, color)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -230,8 +221,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setDayFilterColor(weekDay: WeekDay, color: Int?) {
         settings.dayView.apply {
             setTextFilterColor(weekDay, color)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     private inner class Adapter() : PagerAdapter() {
