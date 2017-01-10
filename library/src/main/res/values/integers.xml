@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="lcv_sunday">0</integer>
+    <integer name="lcv_monday">1</integer>
+    <integer name="lcv_tuesday">2</integer>
+    <integer name="lcv_wednesday">3</integer>
+    <integer name="lcv_thurday">4</integer>
+    <integer name="lcv_friday">5</integer>
+    <integer name="lcv_saturday">6</integer>
+</resources>
