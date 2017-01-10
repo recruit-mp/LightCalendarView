@@ -59,6 +59,14 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
                 defaultTextPaints.values.forEach { it.textSize = value }
             }
 
+        private val textFilterColorMap: MutableMap<WeekDay, Int?> = WeekDay.values().map {
+            it to when (it) {
+                WeekDay.SUNDAY -> context.getColorCompat(R.color.light_calendar_view__week_day_sunday_text_color)
+                WeekDay.SATURDAY -> context.getColorCompat(R.color.light_calendar_view__week_day_saturday_text_color)
+                else -> 0x00000000
+            }
+        }.toMutableMap()
+
         // ------------- Base --------------------------------------------------------------------------------------
         var basePaint: Paint = Paint().textSize(this@WeekDayView.textSize).color(this@WeekDayView.textColor).typeface(Typeface.DEFAULT).isAntiAlias(true)
             set(value) {
@@ -73,16 +81,17 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
         internal var defaultTextPaints: Map<WeekDay, Paint> = initializedDefaultTextPaints()
 
         private fun initializedDefaultTextPaints() = WeekDay.values().map {
-            it to basePaint.copy().colorFilter(when (it) {
-                WeekDay.SUNDAY -> PorterDuffColorFilter(context.getColorCompat(R.color.light_calendar_view__week_day_sunday_text_color), PorterDuff.Mode.SRC_ATOP)
-                WeekDay.SATURDAY -> PorterDuffColorFilter(context.getColorCompat(R.color.light_calendar_view__week_day_saturday_text_color), PorterDuff.Mode.SRC_ATOP)
-                else -> null
-            })
+            it to basePaint.copy().colorFilter(textFilterColorMap[it]?.let { color -> PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP) } ?: throw IllegalStateException("WeekDay color map for ${it} not found."))
         }.toMap()
         // ---------------------------------------------------------------------------------------------------------
 
         internal fun setTextColorStateList(colorStateList: ColorStateList) {
             textColor = colorStateList.getColorForState(State.DEFAULT.value, textColor)
+        }
+
+        internal fun setTextFilterColor(weekDay: WeekDay, color: Int?) {
+            textFilterColorMap[weekDay] = color
+            defaultTextPaints[weekDay]?.colorFilter(textFilterColorMap[weekDay]?.let { color -> PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP) } ?: throw IllegalStateException("WeekDay color map for ${weekDay} not found."))
         }
     }
 
@@ -108,6 +117,14 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
                 selectedTextPaint.textSize(value)
                 selectedTodayTextPaint.textSize(value)
             }
+
+        private val textFilterColorMap: MutableMap<WeekDay, Int?> = WeekDay.values().map {
+            it to when (it) {
+                WeekDay.SUNDAY -> context.getColorCompat(R.color.light_calendar_view__day_sunday_text_color)
+                WeekDay.SATURDAY -> context.getColorCompat(R.color.light_calendar_view__day_saturday_text_color)
+                else -> 0x00000000
+            }
+        }.toMutableMap()
 
         // ------------- Base --------------------------------------------------------------------------------------
         var baseCirclePaint: Paint = Paint().isAntiAlias(true).style(Paint.Style.FILL)
@@ -156,11 +173,7 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
         internal var selectedTodayTextPaint: Paint = initializedSelectedTodayTextPaint()
 
         private fun initializedDefaultTextPaints() = WeekDay.values().map {
-            it to baseTextPaint.copy().colorFilter(when (it) {
-                WeekDay.SUNDAY -> PorterDuffColorFilter(context.getColorCompat(R.color.light_calendar_view__day_sunday_text_color), PorterDuff.Mode.SRC_ATOP)
-                WeekDay.SATURDAY -> PorterDuffColorFilter(context.getColorCompat(R.color.light_calendar_view__day_saturday_text_color), PorterDuff.Mode.SRC_ATOP)
-                else -> null
-            })
+            it to baseTextPaint.copy().colorFilter(textFilterColorMap[it]?.let { color -> PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP) } ?: throw IllegalStateException("Day color map for ${it} not found."))
         }.toMap()
 
         private fun initializedTodayTextPaint() = baseTextPaint.copy().color(context.getStyledColor(android.R.attr.textColorPrimary, context.getColorCompat(R.color.light_calendar_view__day_today_text_color)))
@@ -190,6 +203,11 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
             todayTextPaint.color(colorStateList, State.TODAY)
             selectedTextPaint.color(colorStateList, State.SELECTED)
             selectedTodayTextPaint.color(colorStateList, State.SELECTED_TODAY)
+        }
+
+        internal fun setTextFilterColor(weekDay: WeekDay, color: Int?) {
+            textFilterColorMap[weekDay] = color
+            defaultTextPaints[weekDay]?.colorFilter(textFilterColorMap[weekDay]?.let { color -> PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP) } ?: throw IllegalStateException("Day color map for ${weekDay} not found."))
         }
 
         internal fun setAccentColorStateList(colorStateList: ColorStateList) {
@@ -241,4 +259,7 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
      * {@see http://stackoverflow.com/questions/12155553/android-typeface-not-copied-into-new-paint}
      */
     private fun Paint.copy(): Paint = Paint(this).apply { typeface = this@copy.typeface }
+
+    /** Converts a map to a mutable map */
+    private fun <K, V> Iterable<Pair<K, V>>.toMutableMap(): MutableMap<K, V> where K : WeekDay, V : Int? = mutableMapOf<K, V>().apply { putAll(this@toMutableMap) }
 }
