@@ -28,10 +28,18 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
 
     private val observer = Observer { observable, any -> notifyObservers(any) }
 
+    // settings for WeekDayView
     val weekDayView = WeekDayView(observer)
+
+    // settings for DayView
     val dayView = DayView(observer)
     var timeZone: TimeZone = TimeZone.getDefault()
     var locale: Locale = Locale.getDefault()
+
+    // settings for DayLayout and WeekDayLayout: first day of the week
+    var firstDayOfWeek: WeekDay = WeekDay.SUNDAY
+    val dayOfWeekOffset: Int
+        get() = WeekDay.values().indexOf(firstDayOfWeek)
 
     /**
      * Settings for {@link jp.co.recruit_mp.android.lightcalendarview.WeekDayView}

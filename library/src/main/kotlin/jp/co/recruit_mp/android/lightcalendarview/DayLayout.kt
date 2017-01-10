@@ -39,9 +39,10 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
     internal var selectedDayView: DayView? = null
 
     internal var callback: Callback? = null
-    var firstDate: Date
-    val thisYear: Int
-    val thisMonth: Int
+    private var firstDate: Calendar = Calendar.getInstance()
+    private var dayOfWeekOffset: Int = -1
+    private val thisYear: Int
+    private val thisMonth: Int
 
     init {
         val cal: Calendar = Calendar.getInstance(settings.locale).apply {
@@ -51,9 +52,49 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
         thisYear = cal[Calendar.YEAR]
         thisMonth = cal[Calendar.MONTH]
 
-        // 左上セルの日付を計算
-        cal.add(Calendar.DAY_OF_YEAR, -cal[Calendar.DAY_OF_WEEK] + 1)
-        firstDate = cal.time
+        // update the layout
+        updateLayout()
+
+        // 今日を選択
+        setSelectedDay(Date())
+    }
+
+    private val observer = Observer { observable, any ->
+        updateLayout()
+    }
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        settings.addObserver(observer)
+    }
+
+    override fun onDetachedFromWindow() {
+        settings.deleteObserver(observer)
+        super.onDetachedFromWindow()
+    }
+
+    private fun updateLayout() {
+        if (dayOfWeekOffset != settings.dayOfWeekOffset) {
+            dayOfWeekOffset = settings.dayOfWeekOffset
+
+            // calculate the date of top-left cell
+            val cal: Calendar = Calendar.getInstance().apply {
+                time = month
+                set(Calendar.DAY_OF_MONTH, 1)
+                add(Calendar.DAY_OF_YEAR, -this[Calendar.DAY_OF_WEEK] + dayOfWeekOffset + 1)
+            }
+            firstDate = cal
+
+            // remove all children
+            removeAllViews()
+
+            // populate children
+            populateViews()
+        }
+    }
+
+    private fun populateViews() {
+        val cal = firstDate.clone() as Calendar
 
         // 7 x 6 マスの DayView を追加する
         (0..rowNum - 1).forEach {
@@ -69,9 +110,6 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
                 cal.add(Calendar.DAY_OF_YEAR, 1)
             }
         }
-
-        // 今日を選択
-        setSelectedDay(Date())
     }
 
     private fun instantiateDayView(cal: Calendar): DayView = DayView(context, settings, cal).apply {
@@ -108,7 +146,7 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
     /**
      * 日付に対応する {@link DayView} を返す
      */
-    fun getDayView(date: Date): DayView? = childList.getOrNull(date.daysAfter(firstDate).toInt()) as? DayView
+    fun getDayView(date: Date): DayView? = childList.getOrNull(date.daysAfter(firstDate.time).toInt()) as? DayView
 
     interface Callback {
         fun onDateSelected(date: Date)

@@ -6,5 +6,6 @@
         <attr name="lcv_textColor" format="reference|color" />
         <attr name="lcv_selectionColor" format="reference|color" />
         <attr name="lcv_accentColor" format="reference|color" />
+        <attr name="lcv_firstDayOfWeek" format="integer" />
     </declare-styleable>
 </resources>

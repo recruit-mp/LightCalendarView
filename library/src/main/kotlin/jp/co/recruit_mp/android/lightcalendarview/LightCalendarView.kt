@@ -58,12 +58,12 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
             setCurrentItem(getPositionForDate(value))
         }
 
-    var monthFrom: Date = Calendar.getInstance(settings.locale).apply { set(Date().getFiscalYear(settings), Calendar.APRIL, 1) }.time
+    var monthFrom: Date = Calendar.getInstance(settings.locale).apply { set(Date().fiscalYear, Calendar.APRIL, 1) }.time
         set(value) {
             field = value
             adapter.notifyDataSetChanged()
         }
-    var monthTo: Date = Calendar.getInstance(settings.locale).apply { set(monthFrom.getFiscalYear(settings) + 1, Calendar.MARCH, 1) }.time
+    var monthTo: Date = Calendar.getInstance(settings.locale).apply { set(monthFrom.fiscalYear + 1, Calendar.MARCH, 1) }.time
         set(value) {
             field = value
             adapter.notifyDataSetChanged()
@@ -83,6 +83,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
                 R.styleable.LightCalendarView_lcv_textColor -> setTextColor(a.getColorStateList(attr))
                 R.styleable.LightCalendarView_lcv_selectionColor -> setSelectionColor(a.getColorStateList(attr))
                 R.styleable.LightCalendarView_lcv_accentColor -> setAccentColor(a.getColorStateList(attr))
+                R.styleable.LightCalendarView_lcv_firstDayOfWeek -> setFirstDayOfWeek(a.getInt(attr, 0))
             }
         }
         a.recycle()
@@ -212,6 +213,20 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
             setAccentColorStateList(colorStateList)
             notifySettingsChanged()
         }
+    }
+
+    /**
+     * First day of the week (e.g. Sunday, Monday, ...)
+     */
+    var firstDayOfWeek: WeekDay
+        get() = settings.firstDayOfWeek
+        set(value) {
+            settings.firstDayOfWeek = value
+            settings.notifySettingsChanged()
+        }
+
+    private fun setFirstDayOfWeek(n: Int) {
+        firstDayOfWeek = WeekDay.fromOrdinal(n)
     }
 
     /**
