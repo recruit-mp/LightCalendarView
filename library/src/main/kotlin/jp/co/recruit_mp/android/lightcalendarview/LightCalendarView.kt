@@ -58,12 +58,12 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
             setCurrentItem(getPositionForDate(value))
         }
 
-    var monthFrom: Date = Calendar.getInstance(settings.locale).apply { set(Date().fiscalYear, Calendar.APRIL, 1) }.time
+    var monthFrom: Date = Calendar.getInstance(settings.locale).apply { set(Date().getFiscalYear(settings), Calendar.APRIL, 1) }.time
         set(value) {
             field = value
             adapter.notifyDataSetChanged()
         }
-    var monthTo: Date = Calendar.getInstance(settings.locale).apply { set(monthFrom.fiscalYear + 1, Calendar.MARCH, 1) }.time
+    var monthTo: Date = Calendar.getInstance(settings.locale).apply { set(monthFrom.getFiscalYear(settings) + 1, Calendar.MARCH, 1) }.time
         set(value) {
             field = value
             adapter.notifyDataSetChanged()
