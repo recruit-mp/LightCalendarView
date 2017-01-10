@@ -4,13 +4,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.Menu
-import android.widget.Button
 import jp.co.recruit_mp.android.lightcalendarview.LightCalendarView
 import jp.co.recruit_mp.android.lightcalendarview.MonthView
 import jp.co.recruit_mp.android.lightcalendarview.accent.Accent
 import jp.co.recruit_mp.android.lightcalendarview.accent.DotAccent
-import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -68,6 +65,5 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.apply {
             title = formatter.format(calendarView.let { it.getDateForPosition(it.currentItem) })
         }
-
     }
 }

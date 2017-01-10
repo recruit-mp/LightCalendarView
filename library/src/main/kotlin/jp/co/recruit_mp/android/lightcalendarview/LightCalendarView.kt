@@ -83,6 +83,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
                 R.styleable.LightCalendarView_lcv_textColor -> setTextColor(a.getColorStateList(attr))
                 R.styleable.LightCalendarView_lcv_selectionColor -> setSelectionColor(a.getColorStateList(attr))
                 R.styleable.LightCalendarView_lcv_accentColor -> setAccentColor(a.getColorStateList(attr))
+                R.styleable.LightCalendarView_lcv_firstDayOfWeek -> setFirstDayOfWeek(a.getInt(attr, 0))
             }
         }
         a.recycle()
@@ -222,6 +223,20 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
         settings.dayView.apply {
             setTextFilterColor(weekDay, color)
         }.notifySettingsChanged()
+    }
+
+    /**
+     * First day of the week (e.g. Sunday, Monday, ...)
+     */
+    var firstDayOfWeek: WeekDay
+        get() = settings.firstDayOfWeek
+        set(value) {
+            settings.firstDayOfWeek = value
+            settings.notifySettingsChanged()
+        }
+
+    private fun setFirstDayOfWeek(n: Int) {
+        firstDayOfWeek = WeekDay.fromOrdinal(n)
     }
 
     private inner class Adapter() : PagerAdapter() {
