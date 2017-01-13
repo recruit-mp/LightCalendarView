@@ -33,6 +33,8 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
 
     // settings for DayView
     val dayView = DayView(observer)
+    var timeZone: TimeZone = TimeZone.getDefault()
+    var locale: Locale = Locale.getDefault()
 
     // settings for DayLayout and WeekDayLayout: first day of the week
     var firstDayOfWeek: WeekDay = WeekDay.SUNDAY

@@ -36,13 +36,15 @@ class LightCalendarViewTest : BaseTestCase() {
 
     @Test
     fun testGetPositionForDate() {
-        val view = LightCalendarView(context)
-        val thisFiscalYear = Date().fiscalYear
+        val view = LightCalendarView(context).apply {
+            monthFrom = Date(2016 - 1900, 4, 1)
+            monthTo = Date(2017 - 1900, 3, 30)
+        }
 
-        assertTrue(view.getPositionForDate(Date(thisFiscalYear - 1900, 3, 1)) == 0)
-        assertTrue(view.getPositionForDate(Date(thisFiscalYear - 1900, 11, 1)) == 8)
-        assertTrue(view.getPositionForDate(Date(thisFiscalYear - 1900, 0, 1)) == 9)
-        assertTrue(view.getPositionForDate(Date(thisFiscalYear - 1900, 2, 1)) == 2)
+        assertTrue(view.getPositionForDate(Date(2016 - 1900, 3, 1)) == 3)
+        assertTrue(view.getPositionForDate(Date(2016 - 1900, 11, 1)) == 8)
+        assertTrue(view.getPositionForDate(Date(2016 - 1900, 0, 1)) == 9)
+        assertTrue(view.getPositionForDate(Date(2016 - 1900, 2, 1)) == 2)
     }
 
 }

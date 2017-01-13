@@ -39,13 +39,13 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
     internal var selectedDayView: DayView? = null
 
     internal var callback: Callback? = null
-    private var firstDate: Calendar = Calendar.getInstance()
+    private var firstDate: Calendar = CalendarKt.getInstance(settings)
     private var dayOfWeekOffset: Int = -1
     private val thisYear: Int
     private val thisMonth: Int
 
     init {
-        val cal: Calendar = Calendar.getInstance().apply {
+        val cal: Calendar = CalendarKt.getInstance(settings).apply {
             time = month
             set(Calendar.DAY_OF_MONTH, 1)
         }
@@ -78,7 +78,7 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
             dayOfWeekOffset = settings.dayOfWeekOffset
 
             // calculate the date of top-left cell
-            val cal: Calendar = Calendar.getInstance().apply {
+            val cal: Calendar = CalendarKt.getInstance(settings).apply {
                 time = month
                 set(Calendar.DAY_OF_MONTH, 1)
                 add(Calendar.DAY_OF_YEAR, (-this[Calendar.DAY_OF_WEEK] + dayOfWeekOffset + 1).let { if (it > 0) (it - WeekDay.values().size) else it })
