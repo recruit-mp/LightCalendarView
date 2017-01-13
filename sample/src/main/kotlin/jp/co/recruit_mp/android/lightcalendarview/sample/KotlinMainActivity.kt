@@ -11,7 +11,7 @@ import jp.co.recruit_mp.android.lightcalendarview.accent.DotAccent
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class KotlinMainActivity : AppCompatActivity() {
 
     lateinit var calendarView: LightCalendarView
 
@@ -53,17 +53,15 @@ class MainActivity : AppCompatActivity() {
                     view.setAccents(map)
                 }, 1000)
 
-                Log.i("MainActivity", "onMonthSelected: date = ${date}")
+                Log.i("KotlinMainActivity", "onMonthSelected: date = ${date}")
             }
 
             override fun onDateSelected(date: Date) {
-                Log.i("MainActivity", "onDateSelected: date = ${date}")
+                Log.i("KotlinMainActivity", "onDateSelected: date = ${date}")
             }
         })
 
         // change the actionbar title
-        supportActionBar?.apply {
-            title = formatter.format(calendarView.let { it.getDateForPosition(it.currentItem) })
-        }
+        supportActionBar?.title = formatter.format(calendarView.monthCurrent)
     }
 }

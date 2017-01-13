@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="jp.co.recruit_mp.android.lightcalendarview.sample.MainActivity">
+        <activity android:name="jp.co.recruit_mp.android.lightcalendarview.sample.KotlinMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
