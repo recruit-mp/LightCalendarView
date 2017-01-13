@@ -1,4 +1,4 @@
-package jp.co.recruit_mp.android.lightcalendarview.sample
+package jp.co.recruit_mp.android.lightcalendarview.kotlinsample
 
 import android.os.Bundle
 import android.os.Handler
@@ -62,8 +62,6 @@ class MainActivity : AppCompatActivity() {
         })
 
         // change the actionbar title
-        supportActionBar?.apply {
-            title = formatter.format(calendarView.let { it.getDateForPosition(it.currentItem) })
-        }
+        supportActionBar?.title = formatter.format(calendarView.monthCurrent)
     }
 }
