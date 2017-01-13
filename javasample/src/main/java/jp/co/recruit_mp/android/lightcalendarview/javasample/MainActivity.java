@@ -54,17 +54,20 @@ public class MainActivity extends AppCompatActivity {
                         Calendar cal = Calendar.getInstance();
                         List<Date> dates = new ArrayList<Date>();
                         for (int i = 0; i < 31; i++) {
-                            cal.set(view.getMonth().getYear(), view.getMonth().getMonth(), i);
-                            dates.add(cal.getTime());
+                            if (i % 2 == 0) {
+                                cal.set(view.getMonth().getYear() + 1900, view.getMonth().getMonth(), i);
+                                dates.add(cal.getTime());
+                            }
                         }
                         HashMap<Date, List<Accent>> map = new HashMap<>();
                         for (Date date : dates) {
                             List<Accent> accents = new ArrayList<>();
-                            for (int i = 0; i < (date.getDay() % 3); i++) {
+                            for (int i = 0; i <= (date.getDate() % 3); i++) {
                                 accents.add(new DotAccent(10f, null, formatter.format(date) + "-" + i));
                             }
                             map.put(date, accents);
                         }
+                        view.setAccents(map);
                     }
                 }, 1000);
 
