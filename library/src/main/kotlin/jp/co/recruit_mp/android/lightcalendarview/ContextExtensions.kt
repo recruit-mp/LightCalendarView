@@ -18,25 +18,27 @@ package jp.co.recruit_mp.android.lightcalendarview
 
 import android.content.Context
 import android.content.res.ColorStateList
+import android.content.res.TypedArray
+import android.os.Build
 import android.support.v4.content.res.ResourcesCompat
 
 /**
  * Created by recruit-mahayash on 10/16/16.
  */
 /** Returns a themed color */
-internal fun Context.getStyledColor(attrResId: Int, defaultColor: Int): Int {
-    val a = obtainStyledAttributes(intArrayOf(attrResId))
-    val color = a.getColor(0, defaultColor)
-    a.recycle()
-    return color
+internal fun Context.getStyledColor(attrResId: Int, defaultColor: Int): Int = when {
+    Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP -> defaultColor
+    else -> obtainStyledAttributes(intArrayOf(attrResId)).use {
+        it.getColor(0, defaultColor)
+    }
 }
 
 /** Returns a themed dimension */
-internal fun Context.getStyledDimension(attrResId: Int, defaultValue: Float): Float {
-    val a = obtainStyledAttributes(intArrayOf(attrResId))
-    val dimen = a.getDimension(0, defaultValue)
-    a.recycle()
-    return dimen
+internal fun Context.getStyledDimension(attrResId: Int, defaultValue: Float): Float = when {
+    Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP -> defaultValue
+    else -> obtainStyledAttributes(intArrayOf(attrResId)).use {
+        it.getDimension(0, defaultValue)
+    }
 }
 
 /** Returns a resourced dimension */
@@ -50,3 +52,9 @@ internal fun Context.getColorStateListCompat(resId: Int): ColorStateList = Resou
 
 /** Returns a resourced string array */
 internal fun Context.getStringArray(resId: Int): Array<String> = resources.getStringArray(resId)
+
+private fun <T> TypedArray.use(block: (a: TypedArray) -> T): T {
+    val result = block(this)
+    recycle()
+    return result
+}
