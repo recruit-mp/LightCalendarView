@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <jp.co.recruit_mp.android.lightcalendarview.LightCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:lcv_weekDayTextSize="18sp"
+                app:lcv_dayTextSize="18sp"
+                app:lcv_textColor="@color/calendar_day_text"
+                app:lcv_selectionColor="@color/calendar_selection"
+                app:lcv_accentColor="@color/calendar_accent"
+                app:lcv_firstDayOfWeek="@integer/lcv_monday"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
