@@ -81,7 +81,9 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
             val cal: Calendar = CalendarKt.getInstance(settings).apply {
                 time = month
                 set(Calendar.DAY_OF_MONTH, 1)
-                add(Calendar.DAY_OF_YEAR, (-this[Calendar.DAY_OF_WEEK] + dayOfWeekOffset + 1).let { if (it > 0) (it - WeekDay.values().size) else it })
+                add(Calendar.DAY_OF_YEAR, (-this[Calendar.DAY_OF_WEEK] + dayOfWeekOffset + 1).let { offset ->
+                    if (offset > 0) (offset - WeekDay.values().size) else offset
+                })
             }
             firstDate = cal
 
