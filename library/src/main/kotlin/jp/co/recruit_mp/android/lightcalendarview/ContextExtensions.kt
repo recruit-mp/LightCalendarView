@@ -26,19 +26,17 @@ import android.support.v4.content.res.ResourcesCompat
  * Created by recruit-mahayash on 10/16/16.
  */
 /** Returns a themed color */
-internal fun Context.getStyledColor(attrResId: Int, defaultColor: Int): Int = when {
-    Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP -> defaultColor
-    else -> obtainStyledAttributes(intArrayOf(attrResId)).use {
-        it.getColor(0, defaultColor)
-    }
+internal fun Context.getStyledColor(attrResId: Int, defaultColor: Int): Int = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+    obtainStyledAttributes(intArrayOf(attrResId)).use { it.getColor(0, defaultColor) }
+} else {
+    defaultColor
 }
 
 /** Returns a themed dimension */
-internal fun Context.getStyledDimension(attrResId: Int, defaultValue: Float): Float = when {
-    Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP -> defaultValue
-    else -> obtainStyledAttributes(intArrayOf(attrResId)).use {
-        it.getDimension(0, defaultValue)
-    }
+internal fun Context.getStyledDimension(attrResId: Int, defaultValue: Float): Float = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+    obtainStyledAttributes(intArrayOf(attrResId)).use { it.getDimension(0, defaultValue) }
+} else {
+    defaultValue
 }
 
 /** Returns a resourced dimension */
