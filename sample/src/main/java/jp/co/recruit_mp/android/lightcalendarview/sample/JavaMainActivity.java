@@ -72,12 +72,12 @@ public class JavaMainActivity extends AppCompatActivity {
                     }
                 }, 1000);
 
-                Log.i("KotlinMainActivity", "onMonthSelected: date = " + date);
+                Log.i("JavaMainActivity", "onMonthSelected: date = " + date);
             }
 
             @Override
             public void onDateSelected(@NotNull Date date) {
-                Log.i("KotlinMainActivity", "onDateSelected: date = " + date);
+                Log.i("JavaMainActivity", "onDateSelected: date = " + date);
             }
         });
 
