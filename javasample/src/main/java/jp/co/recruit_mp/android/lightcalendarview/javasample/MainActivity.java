@@ -1,4 +1,4 @@
-package jp.co.recruit.javasample;
+package jp.co.recruit_mp.android.lightcalendarview.javasample;
 
 import android.os.Bundle;
 import android.os.Handler;
