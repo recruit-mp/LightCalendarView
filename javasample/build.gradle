@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.1"
 
     defaultConfig {
-        applicationId "jp.co.recruit.javasample"
+        applicationId "jp.co.recruit.android.lightcalendarview.javasample"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
