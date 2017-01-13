@@ -24,9 +24,9 @@ import java.util.concurrent.TimeUnit
  */
 
 /** 日付が一致するかどうかを返す */
-internal fun Date.isSameDay(date: Date): Boolean {
-    val thisCal = Calendar.getInstance().apply { time = this@isSameDay }
-    val thatCal = Calendar.getInstance().apply { time = date }
+internal fun Date.isSameDay(settings: CalendarSettings, date: Date): Boolean {
+    val thisCal = CalendarKt.getInstance(settings).apply { time = this@isSameDay }
+    val thatCal = CalendarKt.getInstance(settings).apply { time = date }
     return (thisCal[Calendar.YEAR] == thatCal[Calendar.YEAR] && thisCal[Calendar.DAY_OF_YEAR] == thatCal[Calendar.DAY_OF_YEAR])
 }
 
@@ -34,30 +34,29 @@ internal fun Date.isSameDay(date: Date): Boolean {
 internal fun Date.daysAfter(date: Date): Long = ((this.time - date.time) / TimeUnit.DAYS.toMillis(1))
 
 /** 自身が date の何ヶ月後かを返す */
-internal fun Date.monthsAfter(date: Date): Long {
-    val thisCal = Calendar.getInstance().apply { time = this@monthsAfter }
-    val thatCal = Calendar.getInstance().apply { time = date }
+internal fun Date.monthsAfter(settings: CalendarSettings, date: Date): Long {
+    val thisCal = CalendarKt.getInstance(settings).apply { time = this@monthsAfter }
+    val thatCal = CalendarKt.getInstance(settings).apply { time = date }
     return ((thisCal[Calendar.YEAR] - thatCal[Calendar.YEAR]) * Month.values().size + (thisCal[Calendar.MONTH] - thatCal[Calendar.MONTH])).toLong()
 }
 
 /** 日付が一致する {@link Date} がリストに含まれているかどうかを返す */
-internal fun List<Date>.containsSameDay(date: Date): Boolean = any { it.isSameDay(date) }
+internal fun List<Date>.containsSameDay(settings: CalendarSettings, date: Date): Boolean = any { it.isSameDay(settings, date) }
 
 /** 日付の計算 */
-internal fun Date.add(field: Int, value: Int) = Calendar.getInstance().apply {
+internal fun Date.add(settings: CalendarSettings, field: Int, value: Int) = CalendarKt.getInstance(settings).apply {
     time = this@add
     add(field, value)
 }.time
 
 /** 年度の取得 */
-internal val Date.fiscalYear: Int
-    get() = Calendar.getInstance().apply { time = this@fiscalYear }.let {
-        if (it[Calendar.MONTH] < 3) {
-            it[Calendar.YEAR] - 1
-        } else {
-            it[Calendar.YEAR]
-        }
+internal fun Date.getFiscalYear(settings: CalendarSettings): Int = CalendarKt.getInstance(settings).apply { time = this@getFiscalYear }.let {
+    if (it[Calendar.MONTH] < 3) {
+        it[Calendar.YEAR] - 1
+    } else {
+        it[Calendar.YEAR]
     }
+}
 
 /** {@link Calendar} への変換 */
-internal fun Date.toCalendar(): Calendar = Calendar.getInstance().apply { time = this@toCalendar }
+internal fun Date.toCalendar(settings: CalendarSettings): Calendar = CalendarKt.getInstance(settings).apply { time = this@toCalendar }

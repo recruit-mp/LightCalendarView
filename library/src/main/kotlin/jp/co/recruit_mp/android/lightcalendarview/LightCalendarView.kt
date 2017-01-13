@@ -58,12 +58,12 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
             setCurrentItem(getPositionForDate(value))
         }
 
-    var monthFrom: Date = Calendar.getInstance().apply { set(Date().fiscalYear, Calendar.APRIL, 1) }.time
+    var monthFrom: Date = CalendarKt.getInstance(settings).apply { set(Date().getFiscalYear(settings), Calendar.APRIL, 1) }.time
         set(value) {
             field = value
             adapter.notifyDataSetChanged()
         }
-    var monthTo: Date = Calendar.getInstance().apply { set(monthFrom.fiscalYear + 1, Calendar.MARCH, 1) }.time
+    var monthTo: Date = CalendarKt.getInstance(settings).apply { set(monthFrom.getFiscalYear(settings) + 1, Calendar.MARCH, 1) }.time
         set(value) {
             field = value
             adapter.notifyDataSetChanged()
@@ -83,6 +83,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
                 R.styleable.LightCalendarView_lcv_textColor -> setTextColor(a.getColorStateList(attr))
                 R.styleable.LightCalendarView_lcv_selectionColor -> setSelectionColor(a.getColorStateList(attr))
                 R.styleable.LightCalendarView_lcv_accentColor -> setAccentColor(a.getColorStateList(attr))
+                R.styleable.LightCalendarView_lcv_firstDayOfWeek -> setFirstDayOfWeek(a.getInt(attr, 0))
             }
         }
         a.recycle()
@@ -119,12 +120,12 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     /**
      * {@link ViewPager} のページに対応する月を返す
      */
-    fun getDateForPosition(position: Int): Date = monthFrom.add(Calendar.MONTH, position)
+    fun getDateForPosition(position: Int): Date = monthFrom.add(settings, Calendar.MONTH, position)
 
     /**
      * 月に対応する {@link ViewPager} のページを返す
      */
-    fun getPositionForDate(date: Date): Int = date.monthsAfter(monthFrom).toInt()
+    fun getPositionForDate(date: Date): Int = date.monthsAfter(settings, monthFrom).toInt()
 
     /**
      * {@link ViewPager} の特定のページにある {@link MonthView} を返す
@@ -148,8 +149,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     private fun setWeekDayRawTextSize(size: Float) {
         settings.weekDayView.apply {
             textSize = size
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -162,8 +162,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     private fun setDayRawTextSize(size: Float) {
         settings.dayView.apply {
             textSize = size
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -172,12 +171,10 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setTextColor(color: Int) {
         settings.weekDayView.apply {
             textColor = color
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
         settings.dayView.apply {
             textColor = color
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -186,12 +183,10 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setTextColor(colorStateList: ColorStateList) {
         settings.weekDayView.apply {
             setTextColorStateList(colorStateList)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
         settings.dayView.apply {
             setTextColorStateList(colorStateList)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -200,8 +195,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setSelectionColor(colorStateList: ColorStateList) {
         settings.dayView.apply {
             setCircleColorStateList(colorStateList)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
 
     /**
@@ -210,9 +204,64 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     fun setAccentColor(colorStateList: ColorStateList) {
         settings.dayView.apply {
             setAccentColorStateList(colorStateList)
-            notifySettingsChanged()
-        }
+        }.notifySettingsChanged()
     }
+
+    /**
+     * Sets color of a weekday of the week
+     */
+    fun setWeekDayFilterColor(weekDay: WeekDay, color: Int?) {
+        settings.weekDayView.apply {
+            setTextFilterColor(weekDay, color)
+        }.notifySettingsChanged()
+    }
+
+    /**
+     * Sets color of a day of the week
+     */
+    fun setDayFilterColor(weekDay: WeekDay, color: Int?) {
+        settings.dayView.apply {
+            setTextFilterColor(weekDay, color)
+        }.notifySettingsChanged()
+    }
+
+    /**
+     * First day of the week (e.g. Sunday, Monday, ...)
+     */
+    var firstDayOfWeek: WeekDay
+        get() = settings.firstDayOfWeek
+        set(value) {
+            settings.firstDayOfWeek = value
+            settings.notifySettingsChanged()
+        }
+
+    private fun setFirstDayOfWeek(n: Int) {
+        firstDayOfWeek = WeekDay.fromOrdinal(n)
+    }
+
+    /**
+     * Sets the timezone to use in LightCalendarView.
+     * Set null to use TimeZone.getDefault()
+     */
+    var timeZone: TimeZone?
+        get() = settings.timeZone
+        set(value) {
+            settings.apply {
+                timeZone = value ?: TimeZone.getDefault()
+            }.notifySettingsChanged()
+        }
+
+    /**
+     * Sets the locale to use in LightCalendarView.
+     * Set null to use Locale.getDefault()
+     */
+    var locale: Locale?
+        get() = settings.locale
+        set(value) {
+            settings.apply {
+                locale = value ?: Locale.getDefault()
+            }.notifySettingsChanged()
+        }
 
     private inner class Adapter() : PagerAdapter() {
         override fun instantiateItem(container: ViewGroup?, position: Int): View {
@@ -235,7 +284,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
 
         override fun isViewFromObject(view: View?, obj: Any?): Boolean = view === obj
 
-        override fun getCount(): Int = Math.max(0, monthTo.monthsAfter(monthFrom).toInt() + 1)
+        override fun getCount(): Int = Math.max(0, monthTo.monthsAfter(settings, monthFrom).toInt() + 1)
     }
 
     interface OnStateUpdatedListener {

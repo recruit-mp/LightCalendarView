@@ -52,13 +52,14 @@ Lightweight Calendar View can be easily customized by setting properties in the 
 
 The following properties are available:
 
-| property name              | type              | description                           |
-| -------------------------- | ----------------- | ------------------------------------- |
-| app:lcv_weekDayTextSize    | dimension         | The text size of weekdays             |
-| app:lcv_dayTextSize        | dimension         | The text size of days                 |
-| app:lcv_textColor          | color or resource | The text color of weekdays and days   |
-| app:lcv_selectionColor     | color or resource | The background color of selections    |
-| app:lcv_accentColor        | color or resource | The color of accents                  |
+| property name              | type              | description                                                         |
+| -------------------------- | ----------------- | ------------------------------------------------------------------- |
+| app:lcv_weekDayTextSize    | dimension         | The text size of weekdays                                           |
+| app:lcv_dayTextSize        | dimension         | The text size of days                                               |
+| app:lcv_textColor          | color or resource | The text color of weekdays and days                                 |
+| app:lcv_selectionColor     | color or resource | The background color of selections                                  |
+| app:lcv_accentColor        | color or resource | The color of accents                                                |
+| app:lcv_firstDayOfWeek     | integer           | The first day of the week (0 = Sunday, 1 = Monday, ..., 6 = Friday) |
 
 The customizations of text colors of selected days or today are done by setting &lt;selector /&gt; color resources to `app:lcv_textColor`, `app:lcv_selectionColor`, or `app:lcv_accentColor` with the following resource files for example.
 
@@ -137,6 +138,20 @@ calendarView.setOnStateUpdatedListener(object : LightCalendarView.OnStateUpdated
     }
 }
 ```
+
+### Coloring Day of The Week
+
+Use `LightCalendarView#setWeekDayFilterColor(weekDay: WeekDay, color: Int?)` and `LightCalendarView#setDayFilterColor(weekDay: WeekDay, color: Int?)` to set the color scheme of day of the week in WeekDayView (e.g. Sunday, Monday, ...) and DayView (e.g. 1, 2, ...) respectively.
+
+```kotlin
+// coloring "sunday" (day of the week) in red
+calendarView.setWeekDayFilterColor(WeekDay.SUNDAY, Color.RED)
+
+// coloring sundays (days) in red
+calendarView.setDayFilterColor(WeekDay.SUNDAY, Color.RED)
+```
+
+Note the library internally uses these color as ColorFilter, meaning it is overlayed on top of the text color set through `LightCalendarView#setTextColor(color: Int)`.
 
 ### Further Customizations
 
