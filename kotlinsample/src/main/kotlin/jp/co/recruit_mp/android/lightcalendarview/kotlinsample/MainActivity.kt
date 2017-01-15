@@ -49,6 +49,8 @@ class MainActivity : AppCompatActivity() {
                     }
                     view.setAccents(map)
                 }, 1000)
+
+                Log.i("MainActivity", "onMonthSelected: date = $date")
             }
 
             onDateSelected = { date -> Log.i("MainActivity", "onDateSelected: date = $date") }
