@@ -32,7 +32,7 @@ import java.util.*
  * 日を表示するための {@link CellView}
  * Created by masayuki-recruit on 8/18/16.
  */
-class DayView(context: Context, settings: CalendarSettings, var cal: Calendar) : CellView(context, settings) {
+class DayView(context: Context, settings: CalendarSettings, cal: Calendar) : CellView(context, settings) {
 
     val date: Date = cal.time
     val weekDay: WeekDay = WeekDay.fromOrdinal(cal[Calendar.DAY_OF_WEEK] - 1)
@@ -99,7 +99,7 @@ class DayView(context: Context, settings: CalendarSettings, var cal: Calendar) :
     fun setAccents(accents: Collection<Accent>) {
         // map Accents to AccentWrappers
         val wrapped = accents.map { accent ->
-            this.accents.find { it.accent.equals(accent) } ?: AccentWrapper(accent)
+            this.accents.find { it.accent == accent } ?: AccentWrapper(accent)
         }
         this.accents.apply {
             clear()
@@ -117,7 +117,7 @@ class DayView(context: Context, settings: CalendarSettings, var cal: Calendar) :
         val startY: Float = accentsCenterY
         // 各アクセントの位置を設定
         var centerX = startX
-        var centerY = startY
+        val centerY = startY
         accents.forEach { accent ->
             centerX += accent.boundingWidth / 2.0f
             accent.offsetX = accent.centerX - centerX
@@ -140,7 +140,7 @@ class DayView(context: Context, settings: CalendarSettings, var cal: Calendar) :
 
     /** テキストとアクセントを描画する際の位置を決定する */
     private fun updateMetrics() {
-        val fm = textPaint.getFontMetrics()
+        val fm = textPaint.fontMetrics
         // FontMetrics で得られる ascend, descend の位置
         //  ascend  < 0  -> ___________________________
         //                    |＼　／|
@@ -320,6 +320,6 @@ class DayView(context: Context, settings: CalendarSettings, var cal: Calendar) :
         }
     }
 
-    override fun toString(): String = "DayView(${date})"
+    override fun toString(): String = "DayView($date)"
 
 }
