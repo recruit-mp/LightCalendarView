@@ -50,7 +50,7 @@ class WeekDayView(context: Context, settings: CalendarSettings, var weekDay: Wee
     }
 
     private fun updateMetrics() {
-        val fm = textPaint.getFontMetrics()
+        val fm = textPaint.fontMetrics
         val textWidth = textPaint.measureText(text)
         val textHeight = fm.descent - fm.ascent
         baseX = centerX - textWidth / 2
@@ -65,12 +65,9 @@ class WeekDayView(context: Context, settings: CalendarSettings, var weekDay: Wee
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
-        canvas?.let {
-            // 文字列描画
-            it.drawText(text, baseX, baseY, textPaint)
-        }
+        canvas?.drawText(text, baseX, baseY, textPaint)
     }
 
-    override fun toString(): String = "WeekDayView(${weekDay})"
+    override fun toString(): String = "WeekDayView($weekDay)"
 
 }

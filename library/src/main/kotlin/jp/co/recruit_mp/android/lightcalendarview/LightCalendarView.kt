@@ -47,16 +47,10 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
             }
         }
     }
-    private val monthViewCallback: MonthView.Callback = object : MonthView.Callback {
-        override fun onDateSelected(date: Date) {
-            onDateSelected?.invoke(date)
-        }
-    }
-
     var monthCurrent: Date
         get() = getDateForPosition(currentItem)
         set(value) {
-            setCurrentItem(getPositionForDate(value))
+            currentItem = getPositionForDate(value)
         }
 
     var monthFrom: Date = CalendarKt.getInstance(settings).apply { set(Date().getFiscalYear(settings), Calendar.APRIL, 1) }.time
@@ -92,7 +86,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
         adapter = Adapter()
         addOnPageChangeListener(onPageChangeListener)
 
-        setCurrentItem(getPositionForDate(Date()))
+        currentItem = getPositionForDate(Date())
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -257,11 +251,11 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
             }.notifySettingsChanged()
         }
 
-    private inner class Adapter() : PagerAdapter() {
+    private inner class Adapter : PagerAdapter() {
         override fun instantiateItem(container: ViewGroup?, position: Int): View {
             val view = MonthView(context, settings, getDateForPosition(position)).apply {
                 tag = context.getString(R.string.month_view_tag_name, position)
-                callback = this@LightCalendarView.monthViewCallback
+                onDateSelected = { date -> this@LightCalendarView.onDateSelected?.invoke(date) }
             }
             container?.addView(view, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
 

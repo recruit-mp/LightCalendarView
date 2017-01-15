@@ -42,7 +42,7 @@ enum class WeekDay {
          */
         fun getPermutation(n: Int): List<WeekDay> = values().let {
             val indices = it.size.let { size -> (0..size - 1).map { i -> (i + n) % size } }
-            return it.slice(indices)
+            it.slice(indices)
         }
     }
 
