@@ -45,9 +45,10 @@ class MonthView(context: Context, settings: CalendarSettings, var month: Date) :
         dayLayout.setSelectedDay(date)
     }
 
-    fun setAccents(date: Date, accents: Collection<Accent>) = dayLayout.let {
-        it.getDayView(date)?.setAccents(accents)
-        it.invalidateDayViews()
+    fun setAccents(date: Date, accents: Collection<Accent>) {
+        dayLayout.apply {
+            getDayView(date)?.setAccents(accents)
+        }.invalidateDayViews()
     }
 
     fun setAccents(map: Map<Date, Collection<Accent>>) {

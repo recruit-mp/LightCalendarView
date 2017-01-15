@@ -44,9 +44,9 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
     /**
      * Settings for {@link jp.co.recruit_mp.android.lightcalendarview.WeekDayView}
      */
-    inner class WeekDayView(observer: Observer? = null) : ObservableSettings() {
+    inner class WeekDayView(observer: Observer) : ObservableSettings() {
         init {
-            observer?.let { addObserver(it) }
+            addObserver(observer)
         }
 
         var textColor: Int = context.getStyledColor(android.R.attr.textColorPrimary, context.getColorCompat(R.color.light_calendar_view__week_day_weekday_text_color))
@@ -100,9 +100,9 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
     /**
      * Settings for {@link jp.co.recruit_mp.android.lightcalendarview.DayView}
      */
-    inner class DayView(observer: Observer? = null) : ObservableSettings() {
+    inner class DayView(observer: Observer) : ObservableSettings() {
         init {
-            observer?.let { addObserver(it) }
+            addObserver(observer)
         }
 
         var textColor: Int = context.getStyledColor(android.R.attr.textColorPrimary, context.getColorCompat(R.color.light_calendar_view__day_weekday_text_color))

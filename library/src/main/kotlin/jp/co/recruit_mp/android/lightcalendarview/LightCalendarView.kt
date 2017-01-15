@@ -231,11 +231,11 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
      * Sets the timezone to use in LightCalendarView.
      * Set null to use TimeZone.getDefault()
      */
-    var timeZone: TimeZone?
+    var timeZone: TimeZone
         get() = settings.timeZone
         set(value) {
             settings.apply {
-                timeZone = value ?: TimeZone.getDefault()
+                timeZone = value
             }.notifySettingsChanged()
         }
 
@@ -243,11 +243,11 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
      * Sets the locale to use in LightCalendarView.
      * Set null to use Locale.getDefault()
      */
-    var locale: Locale?
+    var locale: Locale
         get() = settings.locale
         set(value) {
             settings.apply {
-                locale = value ?: Locale.getDefault()
+                locale = value
             }.notifySettingsChanged()
         }
 
