@@ -36,26 +36,21 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
     private var settings: CalendarSettings = CalendarSettings(context)
 
     private var selectedPage: Int = 0
-    private var onStateUpdatedListener: OnStateUpdatedListener? = null
+    var onMonthSelected: ((date: Date, view: MonthView) -> Unit)? = null
+    var onDateSelected: ((date: Date) -> Unit)? = null
     private val onPageChangeListener: OnPageChangeListener = object : SimpleOnPageChangeListener() {
         override fun onPageSelected(position: Int) {
             selectedPage = position
 
             getMonthViewForPosition(position)?.let { view ->
-                onStateUpdatedListener?.onMonthSelected(getDateForPosition(position), view)
+                onMonthSelected?.invoke(getDateForPosition(position), view)
             }
         }
     }
-    private val monthViewCallback: MonthView.Callback = object : MonthView.Callback {
-        override fun onDateSelected(date: Date) {
-            onStateUpdatedListener?.onDateSelected(date)
-        }
-    }
-
     var monthCurrent: Date
         get() = getDateForPosition(currentItem)
         set(value) {
-            setCurrentItem(getPositionForDate(value))
+            currentItem = getPositionForDate(value)
         }
 
     var monthFrom: Date = CalendarKt.getInstance(settings).apply { set(Date().getFiscalYear(settings), Calendar.APRIL, 1) }.time
@@ -91,7 +86,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
         adapter = Adapter()
         addOnPageChangeListener(onPageChangeListener)
 
-        setCurrentItem(getPositionForDate(Date()))
+        currentItem = getPositionForDate(Date())
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -108,13 +103,6 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
         }
 
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-    }
-
-    /**
-     * {@link OnStateUpdatedListener} を設定する
-     */
-    fun setOnStateUpdatedListener(onStateUpdatedListener: OnStateUpdatedListener) {
-        this.onStateUpdatedListener = onStateUpdatedListener
     }
 
     /**
@@ -243,11 +231,11 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
      * Sets the timezone to use in LightCalendarView.
      * Set null to use TimeZone.getDefault()
      */
-    var timeZone: TimeZone?
+    var timeZone: TimeZone
         get() = settings.timeZone
         set(value) {
             settings.apply {
-                timeZone = value ?: TimeZone.getDefault()
+                timeZone = value
             }.notifySettingsChanged()
         }
 
@@ -255,24 +243,24 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
      * Sets the locale to use in LightCalendarView.
      * Set null to use Locale.getDefault()
      */
-    var locale: Locale?
+    var locale: Locale
         get() = settings.locale
         set(value) {
             settings.apply {
-                locale = value ?: Locale.getDefault()
+                locale = value
             }.notifySettingsChanged()
         }
 
-    private inner class Adapter() : PagerAdapter() {
+    private inner class Adapter : PagerAdapter() {
         override fun instantiateItem(container: ViewGroup?, position: Int): View {
             val view = MonthView(context, settings, getDateForPosition(position)).apply {
                 tag = context.getString(R.string.month_view_tag_name, position)
-                callback = this@LightCalendarView.monthViewCallback
+                onDateSelected = { date -> this@LightCalendarView.onDateSelected?.invoke(date) }
             }
             container?.addView(view, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
 
             if (position == selectedPage) {
-                onStateUpdatedListener?.onMonthSelected(getDateForPosition(position), view)
+                onMonthSelected?.invoke(getDateForPosition(position), view)
             }
 
             return view
@@ -285,10 +273,5 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
         override fun isViewFromObject(view: View?, obj: Any?): Boolean = view === obj
 
         override fun getCount(): Int = Math.max(0, monthTo.monthsAfter(settings, monthFrom).toInt() + 1)
-    }
-
-    interface OnStateUpdatedListener {
-        fun onMonthSelected(date: Date, view: MonthView)
-        fun onDateSelected(date: Date)
     }
 }

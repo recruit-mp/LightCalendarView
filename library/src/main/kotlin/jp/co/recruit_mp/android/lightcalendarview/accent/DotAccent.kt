@@ -35,10 +35,8 @@ class DotAccent(var radius: Float, var color: Int? = null, key: Any = Any()) : A
 
     override fun draw(canvas: Canvas, x: Float, y: Float, paint: Paint) {
         val oldColor = paint.color
-        canvas.let {
-            paint.color = this.color ?: paint.color
-            it.drawCircle(x, y, this.radius, paint)
-            paint.color = oldColor
-        }
+        paint.color = this.color ?: paint.color
+        canvas.drawCircle(x, y, this.radius, paint)
+        paint.color = oldColor
     }
 }

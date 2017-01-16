@@ -7,6 +7,6 @@ import java.util.*
  */
 class CalendarKt : GregorianCalendar() {
     companion object {
-        fun getInstance(settings: CalendarSettings) = getInstance(settings.timeZone, settings.locale)
+        fun getInstance(settings: CalendarSettings): Calendar = getInstance(settings.timeZone, settings.locale)
     }
 }

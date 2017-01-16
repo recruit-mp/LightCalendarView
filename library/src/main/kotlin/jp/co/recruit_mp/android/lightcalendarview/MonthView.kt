@@ -26,34 +26,29 @@ import java.util.*
  * 月カレンダーを表示する {@link LinearLayout}
  * Created by masayuki-recruit on 8/19/16.
  */
-class MonthView(context: Context, private val settings: CalendarSettings, var month: Date) : LinearLayout(context), DayLayout.Callback {
+class MonthView(context: Context, settings: CalendarSettings, var month: Date) : LinearLayout(context) {
 
-    internal var callback: Callback? = null
+    internal var onDateSelected: ((date: Date) -> Unit)? = null
 
-    private val weekDayLayout: WeekDayLayout
-    private val dayLayout: DayLayout
+    private val weekDayLayout: WeekDayLayout = WeekDayLayout(context, settings)
+    private val dayLayout: DayLayout = DayLayout(context, settings, month).apply { onDateSelected = { date -> this@MonthView.onDateSelected?.invoke(date) } }
 
     init {
         orientation = LinearLayout.VERTICAL
 
-        weekDayLayout = WeekDayLayout(context, settings)
         addView(weekDayLayout, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
 
-        dayLayout = DayLayout(context, settings, month).apply { callback = this@MonthView }
         addView(dayLayout, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
-    }
-
-    override fun onDateSelected(date: Date) {
-        callback?.onDateSelected(date)
     }
 
     fun setSelectedDate(date: Date) {
         dayLayout.setSelectedDay(date)
     }
 
-    fun setAccents(date: Date, accents: Collection<Accent>) = dayLayout.let {
-        it.getDayView(date)?.setAccents(accents)
-        it.invalidateDayViews()
+    fun setAccents(date: Date, accents: Collection<Accent>) {
+        dayLayout.apply {
+            getDayView(date)?.setAccents(accents)
+        }.invalidateDayViews()
     }
 
     fun setAccents(map: Map<Date, Collection<Accent>>) {
@@ -64,9 +59,6 @@ class MonthView(context: Context, private val settings: CalendarSettings, var mo
         dayLayout.invalidateDayViews()
     }
 
-    interface Callback {
-        fun onDateSelected(date: Date)
-    }
 
-    override fun toString(): String = "MonthView(${month})"
+    override fun toString(): String = "MonthView($month)"
 }

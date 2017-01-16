@@ -20,6 +20,9 @@ import jp.co.recruit_mp.android.lightcalendarview.LightCalendarView;
 import jp.co.recruit_mp.android.lightcalendarview.MonthView;
 import jp.co.recruit_mp.android.lightcalendarview.accent.Accent;
 import jp.co.recruit_mp.android.lightcalendarview.accent.DotAccent;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,12 +43,9 @@ public class MainActivity extends AppCompatActivity {
         calendarView.setMonthFrom(calFrom.getTime());
         calendarView.setMonthTo(calTo.getTime());
         calendarView.setMonthCurrent(calNow.getTime());
-
-        // set the calendar view callbacks
-        calendarView.setOnStateUpdatedListener(new LightCalendarView.OnStateUpdatedListener() {
-
+        calendarView.setOnMonthSelected(new Function2<Date, MonthView, Unit>() {
             @Override
-            public void onMonthSelected(@NotNull Date date, @NotNull final MonthView view) {
+            public Unit invoke(Date date, final MonthView monthView) {
                 getSupportActionBar().setTitle(formatter.format(date));
 
                 new Handler().postDelayed(new Runnable() {
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         List<Date> dates = new ArrayList<Date>();
                         for (int i = 0; i < 31; i++) {
                             if (i % 2 == 0) {
-                                cal.set(view.getMonth().getYear() + 1900, view.getMonth().getMonth(), i);
+                                cal.set(monthView.getMonth().getYear() + 1900, monthView.getMonth().getMonth(), i);
                                 dates.add(cal.getTime());
                             }
                         }
@@ -67,18 +67,23 @@ public class MainActivity extends AppCompatActivity {
                             }
                             map.put(date, accents);
                         }
-                        view.setAccents(map);
+                        monthView.setAccents(map);
                     }
                 }, 1000);
 
                 Log.i("JavaMainActivity", "onMonthSelected: date = " + date);
-            }
-
-            @Override
-            public void onDateSelected(@NotNull Date date) {
-                Log.i("JavaMainActivity", "onDateSelected: date = " + date);
+                return null;
             }
         });
+
+        calendarView.setOnDateSelected(new Function1<Date, Unit>() {
+            @Override
+            public Unit invoke(Date date) {
+                Log.i("JavaMainActivity", "onDateSelected: date = " + date);
+                return null;
+            }
+        });
+
 
         // change the actionbar title
         getSupportActionBar().setTitle(formatter.format(calendarView.getMonthCurrent()));
