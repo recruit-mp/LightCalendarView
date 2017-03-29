@@ -53,10 +53,15 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         Calendar cal = Calendar.getInstance();
                         List<Date> dates = new ArrayList<Date>();
+                        List<Date> holidays = new ArrayList<Date>();
                         for (int i = 0; i < 31; i++) {
                             if (i % 2 == 0) {
                                 cal.set(monthView.getMonth().getYear() + 1900, monthView.getMonth().getMonth(), i);
                                 dates.add(cal.getTime());
+                            }
+                            if (i < 7) {
+                                cal.set(monthView.getMonth().getYear() + 1900, monthView.getMonth().getMonth(), i);
+                                holidays.add(cal.getTime());
                             }
                         }
                         HashMap<Date, List<Accent>> map = new HashMap<>();
@@ -68,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
                             map.put(date, accents);
                         }
                         monthView.setAccents(map);
+                        // 祝日を設定
+                        monthView.setHolidays(holidays);
                     }
                 }, 1000);
 
