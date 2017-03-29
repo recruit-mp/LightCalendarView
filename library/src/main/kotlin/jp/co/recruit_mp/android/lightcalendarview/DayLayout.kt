@@ -18,6 +18,7 @@ package jp.co.recruit_mp.android.lightcalendarview
 
 import android.content.Context
 import android.support.v4.view.ViewCompat
+import android.util.Log
 import java.util.*
 
 /**
@@ -106,7 +107,11 @@ class DayLayout(context: Context, settings: CalendarSettings, var month: Date) :
                         addView(instantiateDayView(cal.clone() as Calendar))
                     }
                     else -> {
-                        addView(EmptyView(context, settings))
+                        if (settings.displayOutside) {
+                            addView(instantiateDayView(cal.clone() as Calendar).setOutside())
+                        } else {
+                            addView(EmptyView(context, settings))
+                        }
                     }
                 }
                 cal.add(Calendar.DAY_OF_YEAR, 1)

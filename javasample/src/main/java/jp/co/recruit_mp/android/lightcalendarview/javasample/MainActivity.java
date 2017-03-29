@@ -43,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         calendarView.setMonthFrom(calFrom.getTime());
         calendarView.setMonthTo(calTo.getTime());
         calendarView.setMonthCurrent(calNow.getTime());
+
+        // 前月・翌月を表示する
+        calendarView.setDisplayOutside(true);
+
         calendarView.setOnMonthSelected(new Function2<Date, MonthView, Unit>() {
             @Override
             public Unit invoke(Date date, final MonthView monthView) {
