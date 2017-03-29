@@ -35,6 +35,7 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
     val dayView = DayView(observer)
     var timeZone: TimeZone = TimeZone.getDefault()
     var locale: Locale = Locale.getDefault()
+    var displayOutside: Boolean = false
 
     // settings for DayLayout and WeekDayLayout: first day of the week
     var firstDayOfWeek: WeekDay = WeekDay.SUNDAY
@@ -169,6 +170,7 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
         // ------------ Text ---------------------------------------------------------------------------------------
         internal fun defaultTextPaint(weekDay: WeekDay): Paint = defaultTextPaints[weekDay] ?: throw IllegalStateException("cannot find default Paint with weekDay - $weekDay")
 
+        internal var outsideTextPaint: Paint = initializeOutsideTextPaint()
         internal var defaultTextPaints: Map<WeekDay, Paint> = initializedDefaultTextPaints()
         internal var todayTextPaint: Paint = initializedTodayTextPaint()
         internal var selectedTextPaint: Paint = initializeSelectedTextPaint()
@@ -178,6 +180,7 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
             it to baseTextPaint.copy().colorFilter(textFilterColorMap[it]?.let { color -> PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP) } ?: throw IllegalStateException("Day color map for $it not found."))
         }.toMap()
 
+        private fun initializeOutsideTextPaint() = baseTextPaint.copy().color(context.getStyledColor(android.R.attr.textColorPrimary, context.getColorCompat(R.color.light_calendar_view__day_today_text_color)))
         private fun initializedTodayTextPaint() = baseTextPaint.copy().color(context.getStyledColor(android.R.attr.textColorPrimary, context.getColorCompat(R.color.light_calendar_view__day_today_text_color)))
         private fun initializeSelectedTextPaint() = baseTextPaint.copy().typeface(Typeface.DEFAULT_BOLD).color(context.getStyledColor(android.R.attr.textColorPrimaryInverse, context.getColorCompat(R.color.light_calendar_view__day_selected_text_color)))
         private fun initializedSelectedTodayTextPaint() = baseTextPaint.copy().typeface(Typeface.DEFAULT_BOLD).color(context.getStyledColor(android.R.attr.textColorPrimaryInverse, context.getColorCompat(R.color.light_calendar_view__day_selected_today_text_color)))
@@ -205,6 +208,9 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
             todayTextPaint.color(colorStateList, State.TODAY)
             selectedTextPaint.color(colorStateList, State.SELECTED)
             selectedTodayTextPaint.color(colorStateList, State.SELECTED_TODAY)
+        }
+        internal fun setOutsideTextColorStateList(color:Int) {
+            outsideTextPaint.color = color
         }
 
         internal fun setTextFilterColor(weekDay: WeekDay, color: Int?) {
