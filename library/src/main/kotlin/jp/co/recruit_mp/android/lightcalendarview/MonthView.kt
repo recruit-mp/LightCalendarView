@@ -59,6 +59,13 @@ class MonthView(context: Context, settings: CalendarSettings, var month: Date) :
         dayLayout.invalidateDayViews()
     }
 
+    // 祝日追加
+    fun setHolidays(map: Collection<Date>) {
+        map.forEach { it ->
+            val date = it
+            dayLayout.getDayView(date)?.setHoliday();
+        }
+    }
 
     override fun toString(): String = "MonthView($month)"
 }
