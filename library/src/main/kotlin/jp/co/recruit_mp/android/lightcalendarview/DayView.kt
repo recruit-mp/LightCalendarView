@@ -55,6 +55,7 @@ class DayView(context: Context, settings: CalendarSettings, cal: Calendar) : Cel
 
     private var drawCircle: Boolean = false
     private var isOutside: Boolean = false
+    private var isHoliday: Boolean = false
 
     private var radius: Float = 0f
     private var currentRadius: Float = 0f
@@ -114,6 +115,11 @@ class DayView(context: Context, settings: CalendarSettings, cal: Calendar) : Cel
     fun setOutside():DayView {
         this.isOutside = true
         return this
+    }
+    // 祝日に設定
+    fun setHoliday() {
+        this.isHoliday = true
+        updatePaint();
     }
     // 各アクセントの位置を設定する
     private fun layoutAccents() {
@@ -215,6 +221,11 @@ class DayView(context: Context, settings: CalendarSettings, cal: Calendar) : Cel
             }
             isOutside -> {
                 textPaint = settings.dayView.outsideTextPaint
+                accentPaint = settings.dayView.defaultAccentPaint
+            }
+            // 祝日の設定
+            isHoliday -> {
+                textPaint = settings.dayView.holidayTextPaint
                 accentPaint = settings.dayView.defaultAccentPaint
             }
             else -> {

@@ -8,5 +8,6 @@
         <attr name="lcv_accentColor" format="reference|color" />
         <attr name="lcv_firstDayOfWeek" format="integer" />
         <attr name="lcv_outsideTextColor" format="reference|color" />
+        <attr name="lcv_holidayTextColor" format="reference|color" />
     </declare-styleable>
 </resources>

@@ -29,6 +29,7 @@
                 app:lcv_selectionColor="@color/calendar_selection"
                 app:lcv_accentColor="@color/calendar_accent"
                 app:lcv_outsideTextColor="#ccc"
+                app:lcv_holidayTextColor="#CD0303"
                 app:lcv_firstDayOfWeek="@integer/lcv_monday"/>
 
         </LinearLayout>

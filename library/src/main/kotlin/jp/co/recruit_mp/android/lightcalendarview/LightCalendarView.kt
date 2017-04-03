@@ -80,6 +80,7 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
                 R.styleable.LightCalendarView_lcv_accentColor -> setAccentColor(a.getColorStateList(attr))
                 R.styleable.LightCalendarView_lcv_firstDayOfWeek -> setFirstDayOfWeek(a.getInt(attr, 0))
                 R.styleable.LightCalendarView_lcv_outsideTextColor -> setOutsideTextColor(a.getColor(attr, 0))
+                R.styleable.LightCalendarView_lcv_holidayTextColor -> setHolidayTextColor(a.getColor(attr, 0))
             }
         }
         a.recycle()
@@ -186,6 +187,14 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
             setOutsideTextColorStateList(color)
         }.notifySettingsChanged()
     }
+    /**
+     * 祝日の文字色を設定する
+     */
+    fun setHolidayTextColor(color: Int) {
+        settings.dayView.apply {
+            setHolidayTextColorStateList(color)
+        }.notifySettingsChanged()
+    }
 
     /**
      * 日付ビューの選択時の背景色を設定する
@@ -256,6 +265,13 @@ class LightCalendarView(context: Context, attrs: AttributeSet? = null, defStyleA
             }.notifySettingsChanged()
         }
 
+    var fixToday: Boolean
+        get() = settings.fixToday
+        set(value) {
+            settings.apply {
+                fixToday = value
+            }.notifySettingsChanged()
+        }
     /**
      * Sets the locale to use in LightCalendarView.
      * Set null to use Locale.getDefault()
