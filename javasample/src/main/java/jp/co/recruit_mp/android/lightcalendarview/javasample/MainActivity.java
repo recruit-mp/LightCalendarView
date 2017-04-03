@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         calendarView.setMonthFrom(calFrom.getTime());
         calendarView.setMonthTo(calTo.getTime());
         calendarView.setMonthCurrent(calNow.getTime());
+        // 当日の強調表示固定
+        calendarView.setFixToday(true);
+
         calendarView.setOnMonthSelected(new Function2<Date, MonthView, Unit>() {
             @Override
             public Unit invoke(Date date, final MonthView monthView) {
