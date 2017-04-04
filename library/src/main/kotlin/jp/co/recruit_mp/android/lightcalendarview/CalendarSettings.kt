@@ -122,6 +122,7 @@ class CalendarSettings(private val context: Context) : ObservableSettings() {
                 todayTextPaint.textSize(value)
                 selectedTextPaint.textSize(value)
                 selectedTodayTextPaint.textSize(value)
+                outsideTextPaint.textSize(value)
             }
 
         private val textFilterColorMap: MutableMap<WeekDay, Int?> = WeekDay.values().map {
