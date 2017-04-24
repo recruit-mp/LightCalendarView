@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         calendarView.setMonthFrom(calFrom.getTime());
         calendarView.setMonthTo(calTo.getTime());
         calendarView.setMonthCurrent(calNow.getTime());
+        calendarView.setLocale(Locale.US);
         // 前月・翌月を表示する
         calendarView.setDisplayOutside(true);
         // 当日の強調表示固定
