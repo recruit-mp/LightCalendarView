@@ -17,6 +17,12 @@
 package jp.co.recruit_mp.android.lightcalendarview
 
 import android.content.Context
+import android.content.res.Configuration
+import android.util.DisplayMetrics
+import java.util.*
+import android.R.id.message
+import android.annotation.SuppressLint
+
 
 /**
  * 曜日を表す enum
@@ -47,5 +53,21 @@ enum class WeekDay {
     }
 
     fun getShortLabel(context: Context): String = context.getStringArray(R.array.week_days_short)[ordinal]
+    fun getShortLabel(context: Context, locale: Locale): String = getString(context, locale, R.array.week_days_short)[ordinal]
+
     fun getLabel(context: Context): String = context.getStringArray(R.array.week_days_full)[ordinal]
+
+    @SuppressLint("NewApi")
+    protected fun getString(context: Context, locale: Locale, id: Int): Array<String> {
+        val configuration = getConfiguration(context, locale)
+
+        return context.createConfigurationContext(configuration).getResources().getStringArray(id)
+    }
+
+    @SuppressLint("NewApi")
+    private fun getConfiguration(context: Context, locale: Locale): Configuration {
+        val configuration = Configuration(context.getResources().getConfiguration())
+        configuration.setLocale(locale)
+        return configuration
+    }
 }

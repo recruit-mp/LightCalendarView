@@ -28,7 +28,7 @@ import java.util.*
  */
 class WeekDayView(context: Context, settings: CalendarSettings, var weekDay: WeekDay) : CellView(context, settings) {
 
-    val text: String = weekDay.getShortLabel(context)
+    val text: String = weekDay.getShortLabel(context, settings.locale)
 
     private val textPaint: Paint = settings.weekDayView.defaultTextPaint(weekDay)
     private var baseX: Float = 0f
